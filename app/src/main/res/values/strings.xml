@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Food lover</string>
+    <string name="skip">بزن بریم</string>
+    <string name="next">بعدی</string>
 </resources>
