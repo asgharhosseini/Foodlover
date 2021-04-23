@@ -3,6 +3,7 @@ package ir.ah.app.foodlover.ui.fragment.introit
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import ir.ah.app.foodlover.R
@@ -31,7 +32,7 @@ class IntroitFragment : Fragment(R.layout.fragment_introit) {
         }
 
         btnSkip.setOnClickListener {
-            Snackbar.make(requireView(), "navigate", Snackbar.LENGTH_LONG).show()
+            findNavController().navigate(IntroitFragmentDirections.actionIntroitFragmentToAuthenticationFragment())
         }
 
     }
