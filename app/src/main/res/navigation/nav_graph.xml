@@ -6,14 +6,77 @@
     app:startDestination="@id/splashFragment">
     <fragment
         android:id="@+id/splashFragment"
+        tools:layout="@layout/fragment_spalsh"
         android:name="ir.ah.app.foodlover.ui.fragment.Splash.SplashFragment"
         android:label="SplashFragment" >
         <action
             android:id="@+id/action_splashFragment_to_introitFragment"
             app:destination="@id/introitFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/introitFragment"
+        tools:layout="@layout/fragment_introit"
         android:name="ir.ah.app.foodlover.ui.fragment.introit.IntroitFragment"
-        android:label="IntroitFragment" />
+        android:label="IntroitFragment" >
+        <action
+            android:id="@+id/action_introitFragment_to_authenticationFragment"
+            app:destination="@id/authenticationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/authenticationFragment"
+        tools:layout="@layout/fragment_authentication"
+        android:name="ir.ah.app.foodlover.ui.fragment.auth.AuthenticationFragment"
+        android:label="AuthenticationFragment" >
+        <action
+            android:id="@+id/action_authenticationFragment_to_authPhoneNumberFragment"
+            app:destination="@id/authPhoneNumberFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/authPhoneNumberFragment"
+        tools:layout="@layout/fragment_auth_phonenumber"
+        android:name="ir.ah.app.foodlover.ui.fragment.auth.AuthPhoneNumberFragment"
+        android:label="AuthPhoneNumberFragment" >
+        <action
+            android:id="@+id/action_authPhoneNumberFragment_to_confirmationCode"
+            app:destination="@id/confirmationCode" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmationCode"
+        tools:layout="@layout/fragment_confirmation_code"
+        android:name="ir.ah.app.foodlover.ui.fragment.auth.ConfirmationCode"
+        android:label="ConfirmationCode" >
+        <action
+            android:id="@+id/action_confirmationCode_to_passwordFragment"
+            app:destination="@id/passwordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordFragment"
+        tools:layout="@layout/fragment_password"
+        android:name="ir.ah.app.foodlover.ui.fragment.auth.PasswordFragment"
+        android:label="PasswordFragment" >
+        <action
+            android:id="@+id/action_passwordFragment_to_permissionFragment"
+            app:destination="@id/permissionFragment" />
+        <action
+            android:id="@+id/action_passwordFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/permissionFragment"
+        tools:layout="@layout/fragment_permission"
+        android:name="ir.ah.app.foodlover.ui.fragment.permission.PermissionFragment"
+        android:label="PermissionFragment" >
+        <action
+            android:id="@+id/action_permissionFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        tools:layout="@layout/fragemnt_home"
+        android:name="ir.ah.app.foodlover.ui.fragment.home.HomeFragment"
+        android:label="HomeFragment" />
+
 </navigation>
