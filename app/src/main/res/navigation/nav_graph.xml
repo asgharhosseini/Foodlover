@@ -49,20 +49,11 @@
         android:name="ir.ah.app.foodlover.ui.fragment.auth.ConfirmationCode"
         android:label="ConfirmationCode" >
         <action
-            android:id="@+id/action_confirmationCode_to_passwordFragment"
-            app:destination="@id/passwordFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/passwordFragment"
-        tools:layout="@layout/fragment_password"
-        android:name="ir.ah.app.foodlover.ui.fragment.auth.PasswordFragment"
-        android:label="PasswordFragment" >
-        <action
-            android:id="@+id/action_passwordFragment_to_permissionFragment"
-            app:destination="@id/permissionFragment" />
-        <action
-            android:id="@+id/action_passwordFragment_to_homeFragment"
+            android:id="@+id/action_confirmationCode_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_confirmationCode_to_permissionFragment"
+            app:destination="@id/permissionFragment" />
     </fragment>
     <fragment
         android:id="@+id/permissionFragment"

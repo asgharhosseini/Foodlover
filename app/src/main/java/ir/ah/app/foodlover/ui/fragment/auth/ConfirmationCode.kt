@@ -1,10 +1,13 @@
 package ir.ah.app.foodlover.ui.fragment.auth
 
-import android.os.Bundle
-import android.view.View
-import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
+import android.os.*
+import android.view.*
+import androidx.fragment.app.*
+import androidx.navigation.fragment.*
 import ir.ah.app.foodlover.R
+import ir.ah.app.foodlover.other.checkpermissions.*
+import ir.ah.app.foodlover.other.checkpermissions.ConstantsPermissions.ACCESS_COARSE_LOCATION
+import ir.ah.app.foodlover.other.checkpermissions.ConstantsPermissions.ACCESS_FINE_LOCATION
 import kotlinx.android.synthetic.main.fragment_confirmation_code.*
 
 class ConfirmationCode:Fragment(R.layout.fragment_confirmation_code) {
@@ -15,7 +18,12 @@ class ConfirmationCode:Fragment(R.layout.fragment_confirmation_code) {
 
     private fun initView() {
         btn_Confirmation.setOnClickListener {
-        findNavController().navigate(ConfirmationCodeDirections.actionConfirmationCodeToPasswordFragment())
+            if (PermissionCheck.checkPermissions(requireActivity(), intArrayOf(ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION))) {
+                findNavController().navigate(ConfirmationCodeDirections.actionConfirmationCodeToHomeFragment())
+            } else {
+                findNavController().navigate(ConfirmationCodeDirections.actionConfirmationCodeToPermissionFragment())
+            }
+
         }
 
     }

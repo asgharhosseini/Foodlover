@@ -19,12 +19,12 @@ class PasswordFragment:Fragment(R.layout.fragment_password) {
     }
 
     private fun initView() {
-        btn_loginPhoneNumber.setOnClickListener {
-            if (PermissionCheck.checkPermissions(requireActivity(), intArrayOf(ACCESS_FINE_LOCATION,ACCESS_COARSE_LOCATION))) {
-                findNavController().navigate(PasswordFragmentDirections.actionPasswordFragmentToHomeFragment())
-            }else{
-                findNavController().navigate(PasswordFragmentDirections.actionPasswordFragmentToPermissionFragment())
-            }
-        }
+//        btn_loginPhoneNumber.setOnClickListener {
+//            if (PermissionCheck.checkPermissions(requireActivity(), intArrayOf(ACCESS_FINE_LOCATION,ACCESS_COARSE_LOCATION))) {
+//                findNavController().navigate(PasswordFragmentDirections.actionPasswordFragmentToHomeFragment())
+//            }else{
+//                findNavController().navigate(PasswordFragmentDirections.actionPasswordFragmentToPermissionFragment())
+//            }
+//        }
     }
 }

@@ -42,23 +42,24 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logobase" />
+        app:srcCompat="@drawable/logointro" />
 
     <com.mukesh.OtpView
         android:id="@+id/otp_fragmentConfirmCode_code"
-        android:layout_width="299dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:inputType="number"
+        android:gravity="center"
         android:itemBackground="@android:color/transparent"
         android:textSize="24sp"
         app:itemCount="4"
@@ -91,7 +92,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:text="کدتایید را دریافت نکرده اید."
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_Confirmation" />
 
@@ -103,7 +104,7 @@
         android:layout_marginEnd="32dp"
         android:text="ارسال دوباره در (00:45)"
         android:textColor="@color/purple_500"
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView12"
         app:layout_constraintEnd_toStartOf="@+id/textView12"
         app:layout_constraintStart_toStartOf="parent"
