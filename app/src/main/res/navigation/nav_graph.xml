@@ -11,10 +11,24 @@
         android:label="SplashFragment" >
         <action
             android:id="@+id/action_splashFragment_to_introitFragment"
-            app:destination="@id/introitFragment" />
+            app:destination="@id/introitFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_splashFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/introitFragment"
@@ -23,7 +37,11 @@
         android:label="IntroitFragment" >
         <action
             android:id="@+id/action_introitFragment_to_authenticationFragment"
-            app:destination="@id/authenticationFragment" />
+            app:destination="@id/authenticationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/authenticationFragment"
@@ -32,7 +50,11 @@
         android:label="AuthenticationFragment" >
         <action
             android:id="@+id/action_authenticationFragment_to_authPhoneNumberFragment"
-            app:destination="@id/authPhoneNumberFragment" />
+            app:destination="@id/authPhoneNumberFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/authPhoneNumberFragment"
@@ -41,7 +63,11 @@
         android:label="AuthPhoneNumberFragment" >
         <action
             android:id="@+id/action_authPhoneNumberFragment_to_confirmationCode"
-            app:destination="@id/confirmationCode" />
+            app:destination="@id/confirmationCode"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/confirmationCode"
@@ -50,10 +76,18 @@
         android:label="ConfirmationCode" >
         <action
             android:id="@+id/action_confirmationCode_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <action
             android:id="@+id/action_confirmationCode_to_permissionFragment"
-            app:destination="@id/permissionFragment" />
+            app:destination="@id/permissionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/permissionFragment"
@@ -62,7 +96,11 @@
         android:label="PermissionFragment" >
         <action
             android:id="@+id/action_permissionFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
