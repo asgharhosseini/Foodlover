@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/txt_itemPopular_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=" غذای غربی, فست فود, برگر"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/txt_itemPopular_title"
+            app:layout_constraintTop_toBottomOf="@+id/txt_itemPopular_title" />
+
+
+        <TextView
+            android:id="@+id/txt_itemPopular_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="همبرگر ذغالی"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/cardview"
+            app:layout_constraintTop_toBottomOf="@+id/cardview" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/img_itemPopular"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/bg_search"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/food1" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip4"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="27`"
+            android:textColor="@color/purple_500"
+            android:textSize="12sp"
+            app:chipIcon="@drawable/ic_timer_black_24dp"
+            app:chipIconSize="18dp"
+            app:layout_constraintStart_toStartOf="@+id/cardview"
+            app:layout_constraintTop_toBottomOf="@+id/txt_itemPopular_category" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip5"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:text="256m"
+            android:textColor="@color/purple_500"
+            android:textSize="12sp"
+            app:chipIcon="@drawable/ic_location_on_paint_24dp"
+            app:chipIconSize="18dp"
+            app:layout_constraintBottom_toBottomOf="@+id/chip4"
+            app:layout_constraintStart_toEndOf="@+id/chip4"
+            app:layout_constraintTop_toTopOf="@+id/chip4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
