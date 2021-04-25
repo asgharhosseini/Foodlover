@@ -100,12 +100,53 @@
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
         tools:layout="@layout/fragemnt_home"
         android:name="ir.ah.app.foodlover.ui.fragment.home.HomeFragment"
-        android:label="HomeFragment" />
+        android:label="HomeFragment">
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_allRestaurantFragment"
+            app:destination="@id/allRestaurantFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_discountFragment"
+            app:destination="@id/discountFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_restaurantFragment"
+            app:destination="@id/restaurantFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="ir.ah.app.foodlover.ui.fragment.search.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragemnt_search" />
+    <fragment
+        android:id="@+id/allRestaurantFragment"
+        android:name="ir.ah.app.foodlover.ui.fragment.allrestaurant.AllRestaurantFragment"
+        android:label="AllRestaurantFragment"
+        tools:layout="@layout/fragemnt_all_restaurant" />
+    <fragment
+        android:id="@+id/discountFragment"
+        android:name="ir.ah.app.foodlover.ui.fragment.discount.DiscountFragment"
+        android:label="DiscountFragment"
+        tools:layout="@layout/fragemnt_discount" />
+    <fragment
+        android:id="@+id/restaurantFragment"
+        android:name="ir.ah.app.foodlover.ui.fragment.restaurant.RestaurantFragment"
+        android:label="RestaurantFragment"
+        tools:layout="@layout/fragemnt_restaurant" />
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="ir.ah.app.foodlover.ui.fragment.category.CategoryFragment"
+        android:label="CategoryFragment"
+        tools:layout="@layout/fragemnt_category" />
 
 </navigation>
