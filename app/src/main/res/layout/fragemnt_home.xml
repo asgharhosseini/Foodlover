@@ -43,7 +43,7 @@
                 app:layout_constraintTop_toTopOf="@+id/imageView6" />
 
             <FrameLayout
-                android:id="@+id/frameLayout2"
+                android:id="@+id/fl_homeFragment_search"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="16dp"
@@ -68,10 +68,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="جستجو کنید غذا یا رستوران "
-                app:layout_constraintBottom_toBottomOf="@+id/frameLayout2"
-                app:layout_constraintEnd_toEndOf="@+id/frameLayout2"
-                app:layout_constraintStart_toStartOf="@+id/frameLayout2"
-                app:layout_constraintTop_toTopOf="@+id/frameLayout2" />
+                app:layout_constraintBottom_toBottomOf="@+id/fl_homeFragment_search"
+                app:layout_constraintEnd_toEndOf="@+id/fl_homeFragment_search"
+                app:layout_constraintStart_toStartOf="@+id/fl_homeFragment_search"
+                app:layout_constraintTop_toTopOf="@+id/fl_homeFragment_search" />
 
             <TextView
                 android:id="@+id/textView16"
@@ -80,18 +80,18 @@
                 android:layout_marginTop="16dp"
                 android:text="محبوب ها برای شما"
                 android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="@+id/frameLayout2"
-                app:layout_constraintTop_toBottomOf="@+id/frameLayout2" />
+                app:layout_constraintEnd_toEndOf="@+id/fl_homeFragment_search"
+                app:layout_constraintTop_toBottomOf="@+id/fl_homeFragment_search" />
 
             <TextView
-                android:id="@+id/textView17"
+                android:id="@+id/txt_homeFragment_popularMore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="بیشتر"
                 android:textColor="@color/purple_700"
-                app:layout_constraintStart_toStartOf="@+id/frameLayout2"
-                app:layout_constraintTop_toBottomOf="@+id/frameLayout2" />
+                app:layout_constraintStart_toStartOf="@+id/fl_homeFragment_search"
+                app:layout_constraintTop_toBottomOf="@+id/fl_homeFragment_search" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_homeFragment_popular"
@@ -117,13 +117,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/rv_homeFragment_popular" />
 
             <TextView
-                android:id="@+id/textView21"
+                android:id="@+id/txt_homeFragment_categoryMore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="بیشتر"
                 android:textColor="@color/purple_700"
-                app:layout_constraintStart_toStartOf="@+id/frameLayout2"
+                app:layout_constraintStart_toStartOf="@+id/fl_homeFragment_search"
                 app:layout_constraintTop_toBottomOf="@+id/rv_homeFragment_popular" />
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_homeFragment_category"
@@ -148,13 +148,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/rv_homeFragment_category" />
 
             <TextView
-                android:id="@+id/textView23"
+                android:id="@+id/txt_homeFragment_recommendedMore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="بیشتر"
                 android:textColor="@color/purple_700"
-                app:layout_constraintStart_toStartOf="@+id/frameLayout2"
+                app:layout_constraintStart_toStartOf="@+id/fl_homeFragment_search"
                 app:layout_constraintTop_toBottomOf="@+id/rv_homeFragment_category" />
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_homeFragment_recommended"
@@ -167,28 +167,29 @@
                 tools:listitem="@layout/item_recommended"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView23" />
+                app:layout_constraintTop_toBottomOf="@+id/txt_homeFragment_recommendedMore" />
+
             <TextView
-                android:id="@+id/textView24"
+                android:id="@+id/txt_itemBanner_subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="فقط امروز"
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@+id/textView16"
-                app:layout_constraintTop_toBottomOf="@+id/rv_homeFragment_category" />
+                app:layout_constraintTop_toBottomOf="@+id/rv_homeFragment_recommended" />
 
             <TextView
-                android:id="@+id/textView25"
+                android:id="@+id/txt_homeFragment_bannerMore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="بیشتر"
                 android:textColor="@color/purple_700"
-                app:layout_constraintStart_toStartOf="@+id/frameLayout2"
-                app:layout_constraintTop_toBottomOf="@+id/rv_homeFragment_category" />
+                app:layout_constraintStart_toStartOf="@+id/fl_homeFragment_search"
+                app:layout_constraintTop_toBottomOf="@+id/rv_homeFragment_recommended" />
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_homeFragment_gift"
+                android:id="@+id/rv_homeFragment_banner"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="8dp"
@@ -198,7 +199,7 @@
                 tools:listitem="@layout/item_banner"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView23" />
+                app:layout_constraintTop_toBottomOf="@+id/txt_itemBanner_subtitle" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

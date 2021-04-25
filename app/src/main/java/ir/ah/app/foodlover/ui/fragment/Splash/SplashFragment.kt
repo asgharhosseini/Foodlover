@@ -18,12 +18,13 @@ class SplashFragment:Fragment(R.layout.fragment_spalsh) {
         mainThreadHandler.postDelayed({
             try {
 //                checkSituations()
-                findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToIntroitFragment())
-
-            }catch (e:Exception){
-                Snackbar.make(requireView(),e.message.toString(),Snackbar.LENGTH_LONG).show()
+//                findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToIntroitFragment())
+                findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToHomeFragment())
+//
+            } catch (e: Exception) {
+                Snackbar.make(requireView(), e.message.toString(), Snackbar.LENGTH_LONG).show()
             }
-        },2000)
+        }, 2000)
 
     }
 //    fun checkSituations() {
