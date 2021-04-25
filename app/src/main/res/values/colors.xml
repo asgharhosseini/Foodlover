@@ -19,4 +19,20 @@
     <color name="Gray300">#E8E8E8</color>
     <color name="Gray400">#E8E8E8</color>
     <color name="Gray500">#F8F8FA</color>
+
+
+    <color name="food">#E5454C</color>
+    <color name="drink">#5653D4</color>
+    <color name="vege">#08A791</color>
+    <color name="burger">#FAA33F</color>
+    <color name="coke">#5653D4</color>
+    <color name="dessert">#FB3061</color>
+    <color name="pizza">#E5454C</color>
+    <color name="noodles">#08A791</color>
+    <color name="milktea">#5653D4</color>
+    <color name="chicken">#FAA33F</color>
+    <color name="mexicanfood">#FB3061</color>
+    <color name="coffee">#B6644F</color>
+
+
 </resources>
