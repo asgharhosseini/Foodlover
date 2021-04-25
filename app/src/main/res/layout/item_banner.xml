@@ -8,6 +8,7 @@
     android:layout_margin="2dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
+        android:id="@+id/ll_itemBanner"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
@@ -18,22 +19,22 @@
         <ImageView
             android:layout_gravity="center"
             android:layout_margin="16dp"
-                android:id="@+id/imageView9"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_weight="0.3"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/food"
-                tools:ignore="MissingConstraints" />
+            android:id="@+id/img_itemBanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/food"
+            tools:ignore="MissingConstraints" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="0.7"
+            android:layout_weight="0.5"
             >
 
             <TextView
-                android:id="@+id/textView25"
+                android:id="@+id/txt_homeFragment_bannerMore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -47,7 +48,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView24"
+                android:id="@+id/txt_itemBanner_subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -58,10 +59,10 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView25" />
+                app:layout_constraintTop_toBottomOf="@+id/txt_homeFragment_bannerMore" />
 
             <TextView
-                android:id="@+id/textView26"
+                android:id="@+id/txt_itemBanner_discount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -72,7 +73,19 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView24" />
+                app:layout_constraintTop_toBottomOf="@+id/txt_itemBanner_subtitle" />
+
+            <TextView
+                android:id="@+id/txt_itemBanner_cod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="45826114"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/txt_itemBanner_discount"
+                app:layout_constraintTop_toBottomOf="@+id/txt_itemBanner_discount" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 

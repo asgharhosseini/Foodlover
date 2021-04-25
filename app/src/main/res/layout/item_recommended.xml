@@ -2,7 +2,6 @@
 
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="200dp"
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
@@ -13,17 +12,17 @@
         android:layout_height="wrap_content"
         android:padding="16dp">
 
-        <TextView
-            android:id="@+id/txt_itemPopular_category"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text=" غذای غربی, فست فود, برگر"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/txt_itemPopular_title"
-            app:layout_constraintTop_toBottomOf="@+id/txt_itemPopular_title" />
+        <ImageView
+            android:id="@+id/img_itemRecommended"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@drawable/bg_search"
 
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/food1" />
 
         <TextView
             android:id="@+id/txt_itemPopular_title"
@@ -34,31 +33,24 @@
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/cardview"
-            app:layout_constraintTop_toBottomOf="@+id/cardview" />
+            app:layout_constraintEnd_toEndOf="@+id/img_itemRecommended"
+            app:layout_constraintTop_toBottomOf="@+id/img_itemRecommended" />
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardview"
+        <TextView
+            android:id="@+id/txt_itemPopular_category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="8dp"
-            tools:ignore="MissingConstraints">
+            android:layout_marginTop="8dp"
+            android:maxLines="1"
+            android:text=" غذای غربی, فست فود, برگر"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/txt_itemPopular_title"
+            app:layout_constraintTop_toBottomOf="@+id/txt_itemPopular_title" />
 
-            <ImageView
-                android:id="@+id/img_itemPopular"
-                android:layout_width="match_parent"
-                android:layout_height="130dp"
-                android:background="@drawable/bg_search"
-                android:clipToOutline="true"
-                android:scaleType="centerCrop"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/food1" />
-        </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chip4"
+            android:id="@+id/chip_popular_distanceTime"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:text="27`"
@@ -70,7 +62,7 @@
             app:layout_constraintTop_toBottomOf="@+id/txt_itemPopular_category" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chip5"
+            android:id="@+id/chip_popular_distance"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
@@ -79,9 +71,9 @@
             android:textSize="12sp"
             app:chipIcon="@drawable/ic_location_on_paint_24dp"
             app:chipIconSize="18dp"
-            app:layout_constraintBottom_toBottomOf="@+id/chip4"
-            app:layout_constraintStart_toEndOf="@+id/chip4"
-            app:layout_constraintTop_toTopOf="@+id/chip4" />
+            app:layout_constraintBottom_toBottomOf="@+id/chip_popular_distanceTime"
+            app:layout_constraintStart_toEndOf="@+id/chip_popular_distanceTime"
+            app:layout_constraintTop_toTopOf="@+id/chip_popular_distanceTime" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

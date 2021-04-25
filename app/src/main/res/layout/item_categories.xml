@@ -14,7 +14,7 @@
 
 
         <ImageView
-            android:id="@+id/imageView8"
+            android:id="@+id/img_category"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginTop="16dp"
@@ -25,26 +25,26 @@
             app:srcCompat="@drawable/food" />
 
         <TextView
-            android:id="@+id/textView18"
+            android:id="@+id/txt_category_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:textColor="@color/white"
             android:text="title"
-            app:layout_constraintEnd_toEndOf="@+id/imageView8"
-            app:layout_constraintStart_toStartOf="@+id/imageView8"
-            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+            app:layout_constraintEnd_toEndOf="@+id/img_category"
+            app:layout_constraintStart_toStartOf="@+id/img_category"
+            app:layout_constraintTop_toBottomOf="@+id/img_category" />
 
         <TextView
-            android:id="@+id/textView19"
+            android:id="@+id/txt_category_places"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:textColor="@color/white"
             android:text="subtitle"
-            app:layout_constraintEnd_toEndOf="@+id/textView18"
-            app:layout_constraintStart_toStartOf="@+id/textView18"
-            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+            app:layout_constraintEnd_toEndOf="@+id/txt_category_title"
+            app:layout_constraintStart_toStartOf="@+id/txt_category_title"
+            app:layout_constraintTop_toBottomOf="@+id/txt_category_title" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>
