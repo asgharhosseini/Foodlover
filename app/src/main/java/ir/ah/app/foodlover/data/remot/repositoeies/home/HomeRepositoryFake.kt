@@ -4,6 +4,7 @@ import ir.ah.app.foodlover.R
 import ir.ah.app.foodlover.data.model.banner.Banner
 import ir.ah.app.foodlover.data.model.category.Category
 import ir.ah.app.foodlover.data.model.restaurant.Restaurant
+import ir.ah.app.foodlover.data.remot.repositoeies.BannerRepository
 import ir.ah.app.foodlover.data.remot.repositoeies.CategoryRepository
 import ir.ah.app.foodlover.data.remot.repositoeies.RestaurantRepository
 import java.util.*
