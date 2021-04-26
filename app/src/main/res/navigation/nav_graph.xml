@@ -127,7 +127,11 @@
         android:id="@+id/searchFragment"
         android:name="ir.ah.app.foodlover.ui.fragment.search.SearchFragment"
         android:label="SearchFragment"
-        tools:layout="@layout/fragemnt_search" />
+        tools:layout="@layout/fragemnt_search">
+        <action
+            android:id="@+id/action_searchFragment_to_restaurantFragment"
+            app:destination="@id/restaurantFragment" />
+    </fragment>
     <fragment
         android:id="@+id/allRestaurantFragment"
         android:name="ir.ah.app.foodlover.ui.fragment.allrestaurant.AllRestaurantFragment"
