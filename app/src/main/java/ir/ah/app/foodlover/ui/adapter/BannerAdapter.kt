@@ -1,14 +1,13 @@
 package ir.ah.app.foodlover.ui.adapter
 
 
-import android.graphics.Color
-import android.view.LayoutInflater
-import android.view.ViewGroup
-import com.bumptech.glide.RequestManager
+import android.graphics.*
+import android.view.*
+import com.bumptech.glide.*
 import ir.ah.app.foodlover.R
-import ir.ah.app.foodlover.data.model.banner.Banner
+import ir.ah.app.foodlover.data.model.banner.*
 import kotlinx.android.synthetic.main.item_banner.view.*
-import javax.inject.Inject
+import javax.inject.*
 
 class BannerAdapter @Inject constructor(
     private val glide: RequestManager
@@ -32,7 +31,7 @@ class BannerAdapter @Inject constructor(
             txt_itemBanner_subtitle.text = banner.subtitle
             ll_itemBanner.setBackgroundColor(Color.parseColor(banner.color))
             txt_itemBanner_discount.text = banner.discount + "% تخفیف "
-            txt_itemBanner_cod.text = banner.code + "کد تخفیف:"
+            txt_itemBanner_cod.text = banner.code + ":کد تخفیف"
 
             glide.load(banner.image).into(img_itemBanner)
         }
