@@ -1,12 +1,11 @@
 package ir.ah.app.foodlover.di
 
-import dagger.Module
-import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ViewModelComponent
-import dagger.hilt.android.scopes.ViewModelScoped
-import ir.ah.app.foodlover.data.remot.repositoeies.home.HomeRepositoryFake
-import ir.ah.app.foodlover.data.remot.repositoeies.home.HomeRepositoryImpl
+import dagger.*
+import dagger.hilt.*
+import dagger.hilt.android.components.*
+import dagger.hilt.android.scopes.*
+import ir.ah.app.foodlover.data.remot.repositoeies.home.*
+import ir.ah.app.foodlover.data.remot.repositoeies.search.*
 
 
 @Module
@@ -17,10 +16,19 @@ object ViewModelModule {
     @ViewModelScoped
     @Provides
     fun provideHomeRepositoryImpl(homeRepositoryFake: HomeRepositoryFake) =
-        HomeRepositoryImpl(homeRepositoryFake)
+            HomeRepositoryImpl(homeRepositoryFake)
 
     @ViewModelScoped
     @Provides
     fun provideHomeRepositoryFake() = HomeRepositoryFake()
+
+    @ViewModelScoped
+    @Provides
+    fun provideSearchRepositoryImpl(searchRepositoryFake: SearchRepositoryFake) =
+            SearchRepositoryImpl(searchRepositoryFake)
+
+    @ViewModelScoped
+    @Provides
+    fun provideSearchRepositoryFake() = SearchRepositoryFake()
 
 }
