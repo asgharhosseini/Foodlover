@@ -1,22 +1,17 @@
 package ir.ah.app.foodlover.di
 
-import android.content.Context
-import com.bumptech.glide.Glide
-import com.bumptech.glide.RequestManager
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.load.resource.bitmap.CenterCrop
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners
-import com.bumptech.glide.request.RequestOptions
-import dagger.Module
-import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.android.qualifiers.ApplicationContext
-import dagger.hilt.components.SingletonComponent
+import android.content.*
+import com.bumptech.glide.*
+import com.bumptech.glide.load.engine.*
+import com.bumptech.glide.load.resource.bitmap.*
+import com.bumptech.glide.request.*
+import dagger.*
+import dagger.hilt.*
+import dagger.hilt.android.qualifiers.*
+import dagger.hilt.components.*
 import ir.ah.app.foodlover.R
-import ir.ah.app.foodlover.ui.adapter.CategoryAdapter
-import ir.ah.app.foodlover.ui.adapter.PopularAdapter
-import ir.ah.app.foodlover.ui.adapter.RecommendedAdapter
-import javax.inject.Singleton
+import ir.ah.app.foodlover.ui.adapter.*
+import javax.inject.*
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -32,13 +27,25 @@ object AppModule {
 
     @Singleton
     @Provides
+    fun provideSearchAdapter(glide: RequestManager) = SearchAdapter(glide)
+
+    @Singleton
+    @Provides
+    fun provideAllRestaurantAdapter(glide: RequestManager) = AllRestaurantAdapter(glide)
+
+    @Singleton
+    @Provides
+    fun provideBannerAdapter(glide: RequestManager) = BannerAdapter(glide)
+
+    @Singleton
+    @Provides
     fun provideCategoryAdapter() = CategoryAdapter()
 
 
     @Singleton
     @Provides
     fun provideGlideInstance(
-        @ApplicationContext context: Context
+            @ApplicationContext context: Context
     ) = Glide.with(context).setDefaultRequestOptions(
         RequestOptions().placeholder(R.drawable.logobase)
             .error(R.drawable.logobase)
