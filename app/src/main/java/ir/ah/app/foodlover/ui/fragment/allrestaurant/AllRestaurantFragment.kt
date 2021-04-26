@@ -12,11 +12,12 @@ import ir.ah.app.foodlover.R
 import ir.ah.app.foodlover.base.*
 import ir.ah.app.foodlover.other.*
 import ir.ah.app.foodlover.ui.adapter.*
-import kotlinx.android.synthetic.main.fragemnt_all_restaurant.*
+import kotlinx.android.synthetic.main.fragment_all_restaurant.*
+
 import javax.inject.*
 
 @AndroidEntryPoint
-class AllRestaurantFragment : BaseFragment<AllRestaurantViewModel>(R.layout.fragemnt_all_restaurant, AllRestaurantViewModel::class) {
+class AllRestaurantFragment : BaseFragment<AllRestaurantViewModel>(R.layout.fragment_all_restaurant, AllRestaurantViewModel::class) {
     @Inject
     lateinit var allRestaurantAdapter: AllRestaurantAdapter
 

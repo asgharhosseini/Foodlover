@@ -1,26 +1,22 @@
 package ir.ah.app.foodlover.ui.fragment.home
 
-import android.os.Bundle
-import android.util.Log
-import android.view.View
-import androidx.lifecycle.Observer
-import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.snackbar.Snackbar
-import dagger.hilt.android.AndroidEntryPoint
+import android.os.*
+import android.util.*
+import android.view.*
+import androidx.lifecycle.*
+import androidx.navigation.fragment.*
+import androidx.recyclerview.widget.*
+import com.google.android.material.snackbar.*
+import dagger.hilt.android.*
 import ir.ah.app.foodlover.R
-import ir.ah.app.foodlover.base.BaseFragment
-import ir.ah.app.foodlover.other.Constance
-import ir.ah.app.foodlover.other.Resource
-import ir.ah.app.foodlover.ui.adapter.BannerAdapter
-import ir.ah.app.foodlover.ui.adapter.CategoryAdapter
-import ir.ah.app.foodlover.ui.adapter.PopularAdapter
-import ir.ah.app.foodlover.ui.adapter.RecommendedAdapter
-import kotlinx.android.synthetic.main.fragemnt_home.*
-import javax.inject.Inject
+import ir.ah.app.foodlover.base.*
+import ir.ah.app.foodlover.other.*
+import ir.ah.app.foodlover.ui.adapter.*
+import kotlinx.android.synthetic.main.fragment_home.*
+import javax.inject.*
 
 @AndroidEntryPoint
-class HomeFragment : BaseFragment<HomeViewModel>(R.layout.fragemnt_home, HomeViewModel::class) {
+class HomeFragment : BaseFragment<HomeViewModel>(R.layout.fragment_home, HomeViewModel::class) {
     @Inject
     lateinit var popularAdapter: PopularAdapter
 

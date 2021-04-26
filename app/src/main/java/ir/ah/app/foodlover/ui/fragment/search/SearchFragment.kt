@@ -13,11 +13,11 @@ import ir.ah.app.foodlover.R
 import ir.ah.app.foodlover.base.*
 import ir.ah.app.foodlover.other.*
 import ir.ah.app.foodlover.ui.adapter.*
-import kotlinx.android.synthetic.main.fragemnt_search.*
+import kotlinx.android.synthetic.main.fragment_search.*
 import javax.inject.*
 
 @AndroidEntryPoint
-class SearchFragment : BaseFragment<SearchViewModel>(R.layout.fragemnt_search, SearchViewModel::class) {
+class SearchFragment : BaseFragment<SearchViewModel>(R.layout.fragment_search, SearchViewModel::class) {
 
     @Inject
     lateinit var searchAdapter: SearchAdapter

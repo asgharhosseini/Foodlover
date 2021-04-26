@@ -12,11 +12,11 @@ import ir.ah.app.foodlover.R
 import ir.ah.app.foodlover.base.*
 import ir.ah.app.foodlover.other.*
 import ir.ah.app.foodlover.ui.adapter.*
-import kotlinx.android.synthetic.main.fragemnt_category.*
+import kotlinx.android.synthetic.main.fragment_category.*
 import javax.inject.*
 
 @AndroidEntryPoint
-class CategoryFragment : BaseFragment<CategoryViewModel>(R.layout.fragemnt_category, CategoryViewModel::class) {
+class CategoryFragment : BaseFragment<CategoryViewModel>(R.layout.fragment_category, CategoryViewModel::class) {
     @Inject
     lateinit var categoryAdapter: CategoryAdapter
 

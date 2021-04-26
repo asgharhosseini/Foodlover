@@ -12,11 +12,11 @@ import ir.ah.app.foodlover.R
 import ir.ah.app.foodlover.base.*
 import ir.ah.app.foodlover.other.*
 import ir.ah.app.foodlover.ui.adapter.*
-import kotlinx.android.synthetic.main.fragemnt_discount.*
+import kotlinx.android.synthetic.main.fragment_discount.*
 import javax.inject.*
 
 @AndroidEntryPoint
-class DiscountFragment : BaseFragment<DiscountViewModel>(R.layout.fragemnt_discount, DiscountViewModel::class) {
+class DiscountFragment : BaseFragment<DiscountViewModel>(R.layout.fragment_discount, DiscountViewModel::class) {
 
     @Inject
     lateinit var bannerAdapter: BannerAdapter
