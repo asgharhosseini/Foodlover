@@ -109,19 +109,39 @@
         android:label="HomeFragment">
         <action
             android:id="@+id/action_homeFragment_to_searchFragment"
-            app:destination="@id/searchFragment" />
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_homeFragment_to_allRestaurantFragment"
-            app:destination="@id/allRestaurantFragment" />
+            app:destination="@id/allRestaurantFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_homeFragment_to_discountFragment"
-            app:destination="@id/discountFragment" />
+            app:destination="@id/discountFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_homeFragment_to_restaurantFragment"
-            app:destination="@id/restaurantFragment" />
+            app:destination="@id/restaurantFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_homeFragment_to_categoryFragment"
-            app:destination="@id/categoryFragment" />
+            app:destination="@id/categoryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
@@ -130,13 +150,21 @@
         tools:layout="@layout/fragemnt_search">
         <action
             android:id="@+id/action_searchFragment_to_restaurantFragment"
-            app:destination="@id/restaurantFragment" />
+            app:destination="@id/restaurantFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/allRestaurantFragment"
         android:name="ir.ah.app.foodlover.ui.fragment.allrestaurant.AllRestaurantFragment"
         android:label="AllRestaurantFragment"
-        tools:layout="@layout/fragemnt_all_restaurant" />
+        tools:layout="@layout/fragemnt_all_restaurant">
+        <action
+            android:id="@+id/action_allRestaurantFragment_to_restaurantFragment"
+            app:destination="@id/restaurantFragment" />
+    </fragment>
     <fragment
         android:id="@+id/discountFragment"
         android:name="ir.ah.app.foodlover.ui.fragment.discount.DiscountFragment"
@@ -151,6 +179,14 @@
         android:id="@+id/categoryFragment"
         android:name="ir.ah.app.foodlover.ui.fragment.category.CategoryFragment"
         android:label="CategoryFragment"
-        tools:layout="@layout/fragemnt_category" />
+        tools:layout="@layout/fragemnt_category">
+        <action
+            android:id="@+id/action_categoryFragment_to_allRestaurantFragment"
+            app:destination="@id/allRestaurantFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
 
 </navigation>
