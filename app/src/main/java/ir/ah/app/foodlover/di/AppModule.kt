@@ -39,6 +39,22 @@ object AppModule {
 
     @Singleton
     @Provides
+    fun provideAppetizerAdapter(glide: RequestManager) = AppetizerAdapter(glide)
+
+    @Singleton
+    @Provides
+    fun provideMainCourseAdapter(glide: RequestManager) = MainCourseAdapter(glide)
+
+    @Singleton
+    @Provides
+    fun provideDessertAdapter(glide: RequestManager) = DessertAdapter(glide)
+
+    @Singleton
+    @Provides
+    fun provideBeveragesAdapter(glide: RequestManager) = BeveragesAdapter(glide)
+
+    @Singleton
+    @Provides
     fun provideCategoryAdapter() = CategoryAdapter()
 
 
