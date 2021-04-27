@@ -2,4 +2,9 @@
     <string name="app_name">Food lover</string>
     <string name="skip">بزن بریم</string>
     <string name="next">بعدی</string>
+    <string-array name="filter_options">
+        <item>بهترین</item>
+        <item>جدید ترین</item>
+        <item>محبوب ترین</item>
+    </string-array>
 </resources>
