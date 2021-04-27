@@ -1,7 +1,7 @@
 package ir.ah.app.foodlover.data.remot.repositoeies
 
-import ir.ah.app.foodlover.data.model.restaurant.Restaurant
+import ir.ah.app.foodlover.data.model.restaurant.*
 
 interface RestaurantRepository {
-    suspend fun getAllRestaurant(): List<Restaurant>
+    suspend fun getRestaurant(): Restaurant
 }
