@@ -40,6 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text=" غذای غربی, فست فود, برگر"
+            android:maxLines="1"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/txt_itemPopular_title"
@@ -50,28 +51,27 @@
             android:id="@+id/chip_popular_distanceTime"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_marginTop="8dp"
             android:text="27`"
             android:textColor="@color/purple_500"
             android:textSize="12sp"
             app:chipIcon="@drawable/ic_timer_black_24dp"
             app:chipIconSize="18dp"
-            app:layout_constraintStart_toStartOf="@+id/txt_itemPopular_category"
-            app:layout_constraintTop_toBottomOf="@+id/txt_itemPopular_category" />
+            app:layout_constraintBottom_toBottomOf="@+id/chip_popular_distance"
+            app:layout_constraintEnd_toStartOf="@+id/chip_popular_distance"
+            app:layout_constraintTop_toTopOf="@+id/chip_popular_distance" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_popular_distance"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
             android:text="256m"
             android:textColor="@color/purple_500"
             android:textSize="12sp"
             app:chipIcon="@drawable/ic_location_on_paint_24dp"
             app:chipIconSize="18dp"
-            app:layout_constraintBottom_toBottomOf="@+id/chip_popular_distanceTime"
-            app:layout_constraintStart_toEndOf="@+id/chip_popular_distanceTime"
-            app:layout_constraintTop_toTopOf="@+id/chip_popular_distanceTime" />
+            app:layout_constraintEnd_toEndOf="@+id/txt_itemPopular_category"
+            app:layout_constraintTop_toBottomOf="@+id/txt_itemPopular_category" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

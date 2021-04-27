@@ -14,7 +14,6 @@ class RestaurantFragment : Fragment(R.layout.fragment_restaurant) {
         super.onViewCreated(view, savedInstanceState)
 
         initView()
-
     }
 
     private fun initView() {
