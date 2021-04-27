@@ -5,6 +5,7 @@ import dagger.hilt.*
 import dagger.hilt.android.components.*
 import dagger.hilt.android.scopes.*
 import ir.ah.app.foodlover.data.remot.repositoeies.home.*
+import ir.ah.app.foodlover.data.remot.repositoeies.restaurant.*
 import ir.ah.app.foodlover.data.remot.repositoeies.search.*
 
 
@@ -30,5 +31,14 @@ object ViewModelModule {
     @ViewModelScoped
     @Provides
     fun provideSearchRepositoryFake() = SearchRepositoryFake()
+
+    @ViewModelScoped
+    @Provides
+    fun provideRestaurantRepositoryImpl(restaurantRepositoryFake: RestaurantRepositoryFake) =
+            RestaurantRepositoryImpl(restaurantRepositoryFake)
+
+    @ViewModelScoped
+    @Provides
+    fun provideRestaurantRepositoryFake() = RestaurantRepositoryFake()
 
 }
