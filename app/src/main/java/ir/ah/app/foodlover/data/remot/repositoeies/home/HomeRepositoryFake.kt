@@ -34,10 +34,7 @@ import ir.ah.app.foodlover.data.remot.repositoeies.FakeData.restaurantName
 import java.util.*
 import kotlin.random.Random
 
-class HomeRepositoryFake : RestaurantRepository, CategoryRepository, BannerRepository {
-
-
-
+class HomeRepositoryFake : RestaurantsRepository, CategoryRepository, BannerRepository {
 
 
     override suspend fun getAllRestaurant(): List<Restaurant> {

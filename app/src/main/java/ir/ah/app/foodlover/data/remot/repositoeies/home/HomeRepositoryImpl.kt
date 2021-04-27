@@ -1,15 +1,13 @@
 package ir.ah.app.foodlover.data.remot.repositoeies.home
 
-import ir.ah.app.foodlover.data.model.banner.Banner
-import ir.ah.app.foodlover.data.model.category.Category
-import ir.ah.app.foodlover.data.model.restaurant.Restaurant
-import ir.ah.app.foodlover.data.remot.repositoeies.BannerRepository
-import ir.ah.app.foodlover.data.remot.repositoeies.CategoryRepository
-import ir.ah.app.foodlover.data.remot.repositoeies.RestaurantRepository
-import javax.inject.Inject
+import ir.ah.app.foodlover.data.model.banner.*
+import ir.ah.app.foodlover.data.model.category.*
+import ir.ah.app.foodlover.data.model.restaurant.*
+import ir.ah.app.foodlover.data.remot.repositoeies.*
+import javax.inject.*
 
 class HomeRepositoryImpl @Inject constructor(private val homeRepositoryFake: HomeRepositoryFake) :
-    RestaurantRepository, CategoryRepository, BannerRepository {
+        RestaurantsRepository, CategoryRepository, BannerRepository {
     override suspend fun getAllRestaurant(): List<Restaurant> {
         return homeRepositoryFake.getAllRestaurant()
     }
