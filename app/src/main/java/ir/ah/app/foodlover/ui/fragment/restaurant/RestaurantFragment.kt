@@ -28,7 +28,7 @@ class RestaurantFragment : Fragment(R.layout.fragment_restaurant) {
         tabLayout.addTab(tabLayout.newTab().setText("نوشیدنی"))
         tabLayout.tabGravity = TabLayout.GRAVITY_FILL
 
-        val adapter = TabPagerAdapter(parentFragmentManager, tabLayout.tabCount)
+        val adapter = TabPagerMenuAdapter(parentFragmentManager, tabLayout.tabCount)
         vp_fragmentRestaurant.adapter = adapter
         vp_fragmentRestaurant.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
