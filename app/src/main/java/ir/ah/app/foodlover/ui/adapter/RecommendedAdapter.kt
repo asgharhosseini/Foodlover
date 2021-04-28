@@ -1,13 +1,13 @@
 package ir.ah.app.foodlover.ui.adapter
 
 
-import android.view.LayoutInflater
-import android.view.ViewGroup
-import com.bumptech.glide.RequestManager
+import android.view.*
+import com.bumptech.glide.*
 import ir.ah.app.foodlover.R
-import ir.ah.app.foodlover.data.model.restaurant.Restaurant
+import ir.ah.app.foodlover.data.model.restaurant.*
+import ir.ah.app.foodlover.other.*
 import kotlinx.android.synthetic.main.item_recommended.view.*
-import javax.inject.Inject
+import javax.inject.*
 
 
 class RecommendedAdapter @Inject constructor(
@@ -29,8 +29,8 @@ class RecommendedAdapter @Inject constructor(
         holder.itemView.apply {
             txt_itemPopular_title.text = restaurant.title
             txt_itemPopular_category.text = restaurant.categories
-            chip_popular_distance.text = restaurant.distance
-            chip_popular_distanceTime.text = restaurant.timeDistance
+            chip_popular_distance.text = NumberHelper.EnglishToPersian(restaurant.distance)
+            chip_popular_distanceTime.text = NumberHelper.EnglishToPersian(restaurant.timeDistance)
             setOnClickListener {
                 onItemClickListener?.let { click ->
                     click(restaurant)

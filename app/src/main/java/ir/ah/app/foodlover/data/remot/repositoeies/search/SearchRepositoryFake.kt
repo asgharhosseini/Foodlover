@@ -64,7 +64,7 @@ class SearchRepositoryFake : SearchRepository {
                     category.toString(),
                     Random.nextInt(10, 100),
                     Random.nextInt(10, 30).toString() + "'",
-                    Random.nextInt(10, 30).toString() + "m",
+                    Random.nextInt(10, 30).toString() + "دقیقه",
                     restaurantImageName.get(Random.nextInt(0, 9)),
                     restaurantAppetizerList,
                     restaurantMainCourseList,

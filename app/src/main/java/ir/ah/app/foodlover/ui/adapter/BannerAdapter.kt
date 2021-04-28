@@ -6,6 +6,7 @@ import android.view.*
 import com.bumptech.glide.*
 import ir.ah.app.foodlover.R
 import ir.ah.app.foodlover.data.model.banner.*
+import ir.ah.app.foodlover.other.*
 import kotlinx.android.synthetic.main.item_banner.view.*
 import javax.inject.*
 
@@ -30,7 +31,7 @@ class BannerAdapter @Inject constructor(
             txt_homeFragment_bannerMore.text = banner.title
             txt_itemBanner_subtitle.text = banner.subtitle
             ll_itemBanner.setBackgroundColor(Color.parseColor(banner.color))
-            txt_itemBanner_discount.text = banner.discount + "% تخفیف "
+            txt_itemBanner_discount.text = NumberHelper.EnglishToPersian(banner.discount) + "% تخفیف "
             txt_itemBanner_cod.text = banner.code + ":کد تخفیف"
 
             glide.load(banner.image).into(img_itemBanner)
