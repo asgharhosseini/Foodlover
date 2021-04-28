@@ -1,55 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/purple_100"
     android:layout_height="match_parent">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_fragmentAllRestaurant"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_fragmentAllRestaurant"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintTop_toBottomOf="@+id/appbar"
-        tools:itemCount="20"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:listitem="@layout/item_allrestaurant" />
+        app:layout_constraintTop_toBottomOf="@+id/appbar" />
+
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize">
-
-            <ImageView
-                android:id="@+id/iv_fragmentAllRestaurant_backBottom"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_arrow_back_24" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:text="رستوران ها"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                tools:text="Action" />
-
-
-        </androidx.appcompat.widget.Toolbar>
-
-
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/Gray500"
+            app:layout_constraintTop_toBottomOf="@+id/appbar"
+            tools:layout_editor_absoluteX="0dp" />
     </com.google.android.material.appbar.AppBarLayout>
 
 
