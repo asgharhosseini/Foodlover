@@ -6,7 +6,7 @@ import ir.ah.app.foodlover.ui.fragment.restaurant.beverages.*
 import ir.ah.app.foodlover.ui.fragment.restaurant.dessert.*
 import ir.ah.app.foodlover.ui.fragment.restaurant.maincourse.*
 
-class TabPagerAdapter(fm: FragmentManager, private var tabCount: Int) :
+class TabPagerMenuAdapter(fm: FragmentManager, private var tabCount: Int) :
         FragmentPagerAdapter(fm) {
 
     override fun getItem(position: Int): Fragment {
