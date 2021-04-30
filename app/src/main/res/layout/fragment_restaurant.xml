@@ -6,7 +6,15 @@
     android:layout_height="match_parent"
 
     android:fitsSystemWindows="true">
-
+<com.google.android.material.button.MaterialButton
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginBottom="8dp"
+    android:padding="16dp"
+    android:text="سفارشات شما"
+    app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
