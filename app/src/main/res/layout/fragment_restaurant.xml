@@ -7,6 +7,7 @@
 
     android:fitsSystemWindows="true">
 <com.google.android.material.button.MaterialButton
+    android:id="@+id/btn_allOrder"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="bottom"
@@ -195,6 +196,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
+            app:contentScrim="@color/purple_500"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:layout_scrollInterpolator="@android:anim/decelerate_interpolator"
             app:scrimAnimationDuration="600"
