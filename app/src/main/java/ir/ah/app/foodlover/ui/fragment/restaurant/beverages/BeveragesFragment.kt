@@ -43,7 +43,9 @@ class BeveragesFragment : BaseFragment<RestaurantViewModel>(R.layout.fragment_be
             val dialog = OrderDialog(Order(it.id, it.title, it.image, it.price),
                 onClicked = {
                     Snackbar.make(requireView(), this.title, Snackbar.LENGTH_LONG).show()
-
+                    for (i in 1..this.count) {
+                        viewModel.insertOrderItemIntoDb(this)
+                    }
                 })
             dialog.show(parentFragmentManager, null)
         }
