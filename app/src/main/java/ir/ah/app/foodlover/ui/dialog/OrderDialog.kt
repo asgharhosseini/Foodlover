@@ -1,17 +1,21 @@
 package ir.ah.app.foodlover.ui.dialog
 
-import android.os.*
-import android.view.*
-import android.widget.*
-import com.bumptech.glide.*
-import com.bumptech.glide.load.engine.*
-import com.bumptech.glide.load.resource.bitmap.*
-import com.bumptech.glide.request.*
-import com.google.android.material.bottomsheet.*
-import com.google.android.material.button.*
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.request.RequestOptions
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.google.android.material.button.MaterialButton
 import ir.ah.app.foodlover.R
-import ir.ah.app.foodlover.data.model.order.*
-import ir.ah.app.foodlover.other.*
+import ir.ah.app.foodlover.data.model.order.Order
+import ir.ah.app.foodlover.other.MethodBlock
 
 class OrderDialog(
     private val order: Order,
@@ -56,19 +60,21 @@ class OrderDialog(
             .diskCacheStrategy(DiskCacheStrategy.DATA)
             .into(image)
 
+
         btnBuy.setOnClickListener {
-            onClicked(order)
+            val endOrder = Order(null, order.title, order.image, order.price, number)
+            onClicked(endOrder)
             dismiss()
         }
 
         orderNumber.text = number.toString()
         btnAdd.setOnClickListener {
-            number++
+            number += 1
             orderNumber.text = number.toString()
         }
         btnRemove.setOnClickListener {
             if (number != 0) {
-                number--
+                number -= 1
                 orderNumber.text = number.toString()
             }
 
