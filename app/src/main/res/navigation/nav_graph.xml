@@ -163,7 +163,11 @@
         tools:layout="@layout/fragment_all_restaurant">
         <action
             android:id="@+id/action_allRestaurantFragment_to_restaurantFragment"
-            app:destination="@id/restaurantFragment" />
+            app:destination="@id/restaurantFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/discountFragment"
@@ -174,7 +178,15 @@
         android:id="@+id/restaurantFragment"
         android:name="ir.ah.app.foodlover.ui.fragment.restaurant.RestaurantFragment"
         android:label="RestaurantFragment"
-        tools:layout="@layout/fragment_restaurant" />
+        tools:layout="@layout/fragment_restaurant">
+        <action
+            android:id="@+id/action_restaurantFragment_to_allOrderFragment"
+            app:destination="@id/allOrderFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
     <fragment
         android:id="@+id/categoryFragment"
         android:name="ir.ah.app.foodlover.ui.fragment.category.CategoryFragment"
@@ -188,5 +200,10 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
     </fragment>
+    <fragment
+        android:id="@+id/allOrderFragment"
+        android:name="ir.ah.app.foodlover.ui.fragment.allorder.AllOrderFragment"
+        android:label="AllOrderFragment"
+        tools:layout="@layout/fragment_all_order" />
 
 </navigation>
