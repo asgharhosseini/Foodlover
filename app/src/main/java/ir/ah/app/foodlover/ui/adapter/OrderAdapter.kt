@@ -1,17 +1,19 @@
 package ir.ah.app.foodlover.ui.adapter
 
 
-import android.view.*
-import com.bumptech.glide.*
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import com.bumptech.glide.RequestManager
 import ir.ah.app.foodlover.R
-import ir.ah.app.foodlover.data.model.order.*
+import ir.ah.app.foodlover.data.model.order.Order
 import ir.ah.app.foodlover.other.NumberHelper.EnglishToPersian
 import kotlinx.android.synthetic.main.item_order.view.*
-import javax.inject.*
+import javax.inject.Inject
 
 class OrderAdapter @Inject constructor(
     private val glide: RequestManager
 ) : BaseAdapter<Order>() {
+    private var orderEventListener: OrderEventListener? = null
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {
@@ -35,6 +37,9 @@ class OrderAdapter @Inject constructor(
                     click(order)
                 }
             }
+            img_delete.setOnClickListener {
+                orderEventListener?.onDelete(order, position)
+            }
 
         }
     }
@@ -43,5 +48,13 @@ class OrderAdapter @Inject constructor(
         return differ.currentList.size
     }
 
+
+    interface OrderEventListener {
+        fun onDelete(order: Order, position: Int)
+    }
+
+    fun setOnOrderItemEventListener(orderEventListener: OrderEventListener) {
+        this.orderEventListener = orderEventListener
+    }
 
 }
