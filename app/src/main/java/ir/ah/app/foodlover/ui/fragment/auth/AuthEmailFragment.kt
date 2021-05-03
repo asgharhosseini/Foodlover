@@ -2,7 +2,6 @@ package ir.ah.app.foodlover.ui.fragment.auth
 
 import android.os.*
 import android.view.*
-import androidx.core.view.*
 import androidx.fragment.app.*
 import androidx.navigation.fragment.*
 import com.google.android.material.snackbar.*
@@ -35,10 +34,10 @@ class AuthEmailFragment : Fragment(R.layout.fragment_auth_email) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView()
+
     }
 
     private fun initView() {
-
         onClick()
 
 
@@ -46,9 +45,14 @@ class AuthEmailFragment : Fragment(R.layout.fragment_auth_email) {
 
     private fun onClick() {
         txt_login.setOnClickListener {
-            isRegistered = true
-            btn_authEmail.text = "ورود"
-            txt_login.isVisible = false
+            if (!isRegistered) {
+                isRegistered = true
+                btn_authEmail.text = "ورود"
+            } else {
+                isRegistered = false
+                btn_authEmail.text = "ثبت نام"
+            }
+
 
         }
         btn_authEmail.setOnClickListener {
@@ -56,6 +60,7 @@ class AuthEmailFragment : Fragment(R.layout.fragment_auth_email) {
             val password = edt_password.text.toString()
             authUser(email, password)
         }
+
 
     }
 
