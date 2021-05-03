@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "863680267110",
+    "project_id": "foodlover-312508",
+    "storage_bucket": "foodlover-312508.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863680267110:android:853b0de896cde5d61c3ea7",
+        "android_client_info": {
+          "package_name": "ir.ah.app.foodlover"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "863680267110-5j9o0svn5pqbd5gfa8a2vpii9iotntb1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ir.ah.app.foodlover",
+            "certificate_hash": "60b2b5b8e8ec0d030c3f6b5fc181be9c748786b6"
+          }
+        },
+        {
+          "client_id": "863680267110-usvbtmspbmd329is18r1u1mqqvgeovdo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAt7dJfWxnqnp94smXTg4j1AB-9hplgIvk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "863680267110-usvbtmspbmd329is18r1u1mqqvgeovdo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
