@@ -58,16 +58,26 @@
     </fragment>
     <fragment
         android:id="@+id/authPhoneNumberFragment"
-        tools:layout="@layout/fragment_auth_phonenumber"
-        android:name="ir.ah.app.foodlover.ui.fragment.auth.AuthPhoneNumberFragment"
-        android:label="AuthPhoneNumberFragment" >
+        android:name="ir.ah.app.foodlover.ui.fragment.auth.AuthEmailFragment"
+        tools:layout="@layout/fragment_auth_email"
+        android:label="AuthPhoneNumberFragment">
         <action
             android:id="@+id/action_authPhoneNumberFragment_to_confirmationCode"
             app:destination="@id/confirmationCode"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_authPhoneNumberFragment_to_permissionFragment"
+            app:destination="@id/permissionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_authPhoneNumberFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/confirmationCode"
