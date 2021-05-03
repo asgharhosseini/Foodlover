@@ -72,7 +72,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:paddingVertical="16dp"
-            android:text="ثبت نام با شماره تلفن"
+            android:text="ثبت نام با ایمیل"
             android:textSize="16sp"
             app:icon="@drawable/ic_phone_iphone_black_24dp"
             app:layout_constraintEnd_toEndOf="parent"
