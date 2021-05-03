@@ -1,23 +1,22 @@
 package ir.ah.app.foodlover.di
 
-import android.content.Context
-import androidx.room.Room
-import com.bumptech.glide.Glide
-import com.bumptech.glide.RequestManager
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.load.resource.bitmap.CenterCrop
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners
-import com.bumptech.glide.request.RequestOptions
-import dagger.Module
-import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.android.qualifiers.ApplicationContext
-import dagger.hilt.components.SingletonComponent
+import android.content.*
+import android.content.Context.*
+import androidx.room.*
+import com.bumptech.glide.*
+import com.bumptech.glide.load.engine.*
+import com.bumptech.glide.load.resource.bitmap.*
+import com.bumptech.glide.request.*
+import dagger.*
+import dagger.hilt.*
+import dagger.hilt.android.qualifiers.*
+import dagger.hilt.components.*
 import ir.ah.app.foodlover.R
-import ir.ah.app.foodlover.data.loacal.OrderDao
-import ir.ah.app.foodlover.data.loacal.OrderDatabase
+import ir.ah.app.foodlover.data.loacal.*
+import ir.ah.app.foodlover.other.*
+import ir.ah.app.foodlover.other.Constance.SHARED_PREFERENCES_NAME
 import ir.ah.app.foodlover.ui.adapter.*
-import javax.inject.Singleton
+import javax.inject.*
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -84,17 +83,27 @@ object AppModule {
     @Singleton
     fun provideAppDatabase(@ApplicationContext appContext: Context): OrderDatabase {
         return Room.databaseBuilder(
-            appContext,
-            OrderDatabase::class.java,
-            "order_db"
+                appContext,
+                OrderDatabase::class.java,
+                "order_db"
         ).allowMainThreadQueries()
-            .build()
+                .build()
     }
 
     @Provides
     fun provideOrderDao(orderDatabase: OrderDatabase): OrderDao {
         return orderDatabase.orderDao()
     }
+
+
+    @Singleton
+    @Provides
+    fun provideSharedPreferences(@ApplicationContext app: Context): SharedPreferences =
+            app.getSharedPreferences(SHARED_PREFERENCES_NAME, MODE_PRIVATE)
+
+    @Singleton
+    @Provides
+    fun provideUserInfo(sharedPreferences: SharedPreferences) = UserInfoManager(sharedPreferences)
 
 
 }
