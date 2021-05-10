@@ -29,6 +29,12 @@ class PermissionFragment : Fragment(R.layout.fragment_permission),
     private var gMap: GoogleMap? = null
     private var fusedLocationProviderClient: FusedLocationProviderClient? = null
     private var latLng: LatLng? = null
+
+    private var geocoder: Geocoder? = null
+    private var addressList: List<Address> = arrayListOf()
+    private var cityName = ""
+    private var address = ""
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         map_container.onCreate(savedInstanceState)
@@ -73,15 +79,35 @@ class PermissionFragment : Fragment(R.layout.fragment_permission),
         task.addOnSuccessListener {
             if (it != null) {
                 latLng = LatLng(it.latitude, it.longitude)
-                val geocoder = Geocoder(requireContext(), Locale.getDefault())
-                val addressList: List<Address> =
-                    geocoder.getFromLocation(it.latitude, it.longitude, 1)
-                val cityName = addressList.get(0).getAddressLine(0)
-                val address = "$cityName "
+                geocoder = Geocoder(requireContext(), Locale.getDefault())
+                addressList = geocoder!!.getFromLocation(it.latitude, it.longitude, 1)
+                cityName = addressList.get(0).getAddressLine(0)
+                address = "$cityName "
+
                 map_container.getMapAsync(object : OnMapReadyCallback {
                     override fun onMapReady(googleMap: GoogleMap) {
-//                        MapsInitializer.initialize(requireContext())
                         gMap = googleMap
+                        gMap?.setOnMapClickListener {
+                            latLng = LatLng(it.latitude, it.longitude)
+                            geocoder = Geocoder(requireContext(), Locale.getDefault())
+                            addressList = geocoder!!.getFromLocation(it.latitude, it.longitude, 1)
+                            cityName = addressList.get(0).getAddressLine(0)
+                            address = "$cityName "
+                            gMap!!.clear()
+                            gMap!!.addMarker(
+                                MarkerOptions()
+                                    .position(it)
+                                    .title(cityName + "آدرش شما:")
+                            )
+
+                            userInfoManager.saveLocation(
+                                latLng!!.latitude,
+                                latLng!!.longitude,
+                                cityName
+                            )
+
+                        }
+
                         gMap?.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 14f))
                         gMap?.addMarker(
                             MarkerOptions().position(latLng).title("شما").snippet("مکان شما")
@@ -96,11 +122,6 @@ class PermissionFragment : Fragment(R.layout.fragment_permission),
             }
 
         }
-    }
-
-    @SuppressLint("MissingPermission")
-    private fun getCurrentLocation() {
-
     }
 
     private fun requestPermissions() {
