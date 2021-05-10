@@ -9,7 +9,6 @@ import com.google.firebase.auth.*
 import dagger.hilt.android.*
 import ir.ah.app.foodlover.R
 import ir.ah.app.foodlover.other.*
-import ir.ah.app.foodlover.other.checkpermissions.*
 import kotlinx.android.synthetic.main.fragment_auth_email.*
 import kotlinx.coroutines.*
 import kotlinx.coroutines.tasks.*
@@ -106,7 +105,7 @@ class AuthEmailFragment : Fragment(R.layout.fragment_auth_email) {
                     withContext(Dispatchers.Main) {
                         userInfoManager.clear()
                         userInfoManager.saveUser(auth.currentUser.email, auth.currentUser.uid)
-                        checkPermissionAndNavigate()
+                        findNavController().navigate(AuthEmailFragmentDirections.actionAuthPhoneNumberFragmentToPermissionFragment())
                     }
 
                 } catch (e: Exception) {
@@ -126,23 +125,8 @@ class AuthEmailFragment : Fragment(R.layout.fragment_auth_email) {
 
         } else {
             btn_authEmail.text = "ورود"
-            checkPermissionAndNavigate()
-
-        }
-    }
-
-    private fun checkPermissionAndNavigate() {
-        if (PermissionCheck.checkPermissions(
-                        requireActivity(), intArrayOf(
-                        ConstantsPermissions.ACCESS_FINE_LOCATION,
-                        ConstantsPermissions.ACCESS_COARSE_LOCATION
-                )
-                )
-        ) {
-            findNavController().navigate(AuthEmailFragmentDirections.actionAuthPhoneNumberFragmentToHomeFragment())
-
-        } else {
             findNavController().navigate(AuthEmailFragmentDirections.actionAuthPhoneNumberFragmentToPermissionFragment())
+
         }
     }
 
