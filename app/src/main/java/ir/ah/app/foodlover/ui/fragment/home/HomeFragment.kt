@@ -29,6 +29,8 @@ class HomeFragment : BaseFragment<HomeViewModel>(R.layout.fragment_home, HomeVie
     @Inject
     lateinit var bannerAdapter: BannerAdapter
 
+    @Inject
+    lateinit var userInfoManager: UserInfoManager
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -39,6 +41,8 @@ class HomeFragment : BaseFragment<HomeViewModel>(R.layout.fragment_home, HomeVie
         subscribeToObservers()
         setUpRecyclerViews()
         onClick()
+
+        txt_fragmentHome_addresses.text = userInfoManager.getLocationName().toString().trim()
 
     }
 
