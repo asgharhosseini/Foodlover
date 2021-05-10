@@ -1,27 +1,24 @@
 package ir.ah.app.foodlover.ui.fragment.restaurant
 
-import android.os.Bundle
-import android.util.Log
-import android.view.View
-import androidx.lifecycle.Observer
-import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.bumptech.glide.RequestManager
-import com.google.android.material.appbar.AppBarLayout
-import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.tabs.TabLayout
-import dagger.hilt.android.AndroidEntryPoint
+import android.os.*
+import android.util.*
+import android.view.*
+import androidx.lifecycle.*
+import androidx.navigation.fragment.*
+import androidx.recyclerview.widget.*
+import com.bumptech.glide.*
+import com.google.android.material.appbar.*
+import com.google.android.material.snackbar.*
+import com.google.android.material.tabs.*
+import dagger.hilt.android.*
 import ir.ah.app.foodlover.R
-import ir.ah.app.foodlover.base.BaseFragment
-import ir.ah.app.foodlover.data.model.order.Order
-import ir.ah.app.foodlover.other.Constance
-import ir.ah.app.foodlover.other.NumberHelper
-import ir.ah.app.foodlover.other.Resource
-import ir.ah.app.foodlover.ui.adapter.MainCourseAdapter
-import ir.ah.app.foodlover.ui.adapter.TabPagerMenuAdapter
-import ir.ah.app.foodlover.ui.dialog.OrderDialog
+import ir.ah.app.foodlover.base.*
+import ir.ah.app.foodlover.data.model.order.*
+import ir.ah.app.foodlover.other.*
+import ir.ah.app.foodlover.ui.adapter.*
+import ir.ah.app.foodlover.ui.dialog.*
 import kotlinx.android.synthetic.main.fragment_restaurant.*
-import javax.inject.Inject
+import javax.inject.*
 
 @AndroidEntryPoint
 class RestaurantFragment : BaseFragment<RestaurantViewModel>(R.layout.fragment_restaurant, RestaurantViewModel::class) {
@@ -30,6 +27,7 @@ class RestaurantFragment : BaseFragment<RestaurantViewModel>(R.layout.fragment_r
 
     @Inject
     lateinit var glide: RequestManager
+    var orderCount = 0
 
     var title = ""
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -92,7 +90,14 @@ class RestaurantFragment : BaseFragment<RestaurantViewModel>(R.layout.fragment_r
             dialog.show(parentFragmentManager, null)
         }
         btn_allOrder.setOnClickListener {
-            findNavController().navigate(RestaurantFragmentDirections.actionRestaurantFragmentToAllOrderFragment())
+            if (orderCount > 0) {
+                findNavController().navigate(RestaurantFragmentDirections.actionRestaurantFragmentToAllOrderFragment())
+            } else {
+                Snackbar.make(requireView(), "سفارشی نداشته اید", Snackbar.LENGTH_LONG)
+
+                    .show()
+
+            }
         }
 
     }
@@ -130,6 +135,7 @@ class RestaurantFragment : BaseFragment<RestaurantViewModel>(R.layout.fragment_r
         })
 
         viewModel.totalCount.observe(viewLifecycleOwner, Observer {
+            orderCount = it
             btn_allOrder.text = "سفارشات شما (${NumberHelper.EnglishToPersian(it.toString())})"
         })
 

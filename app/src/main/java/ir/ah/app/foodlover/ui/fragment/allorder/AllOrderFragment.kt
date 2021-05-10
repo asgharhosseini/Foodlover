@@ -1,20 +1,20 @@
 package ir.ah.app.foodlover.ui.fragment.allorder
 
-import android.os.Bundle
-import android.view.View
-import androidx.lifecycle.Observer
-import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.gms.maps.GoogleMap
-import dagger.hilt.android.AndroidEntryPoint
+import android.os.*
+import android.view.*
+import androidx.lifecycle.*
+import androidx.navigation.fragment.*
+import androidx.recyclerview.widget.*
+import com.google.android.gms.maps.*
+import dagger.hilt.android.*
 import ir.ah.app.foodlover.R
-import ir.ah.app.foodlover.base.BaseFragment
-import ir.ah.app.foodlover.data.model.order.Order
-import ir.ah.app.foodlover.other.NumberHelper
-import ir.ah.app.foodlover.ui.adapter.OrderAdapter
-import ir.ah.app.foodlover.ui.fragment.restaurant.RestaurantViewModel
+import ir.ah.app.foodlover.base.*
+import ir.ah.app.foodlover.data.model.order.*
+import ir.ah.app.foodlover.other.*
+import ir.ah.app.foodlover.ui.adapter.*
+import ir.ah.app.foodlover.ui.fragment.restaurant.*
 import kotlinx.android.synthetic.main.fragment_all_order.*
-import javax.inject.Inject
+import javax.inject.*
 
 @AndroidEntryPoint
 class AllOrderFragment :
@@ -56,8 +56,16 @@ class AllOrderFragment :
             orderAdapter.differ.submitList(it)
         })
         viewModel.totalSum.observe(viewLifecycleOwner, Observer {
-            txt_fragmentOrder_totalPrice.text =
-                NumberHelper.EnglishToPersian(it.toString()) + "تومان"
+
+            if (it != null) {
+                txt_fragmentOrder_totalPrice.text =
+                    NumberHelper.EnglishToPersian(it.toString()) + "تومان"
+            } else {
+                txt_fragmentOrder_totalPrice.text =
+                    NumberHelper.EnglishToPersian("0") + "تومان"
+                findNavController().popBackStack()
+            }
+
         })
     }
 
