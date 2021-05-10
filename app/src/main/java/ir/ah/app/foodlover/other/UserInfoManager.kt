@@ -14,6 +14,27 @@ class UserInfoManager @Inject constructor(private val sharedPreferences: SharedP
         editor.apply()
     }
 
+    fun saveLocation(latitude: Double, longitude: Double, locationName: String? = null) {
+        val editor = sharedPreferences.edit()
+        editor.putString("latitude", latitude.toString())
+        editor.putString("longitude", longitude.toString())
+        editor.putString("locationName", locationName)
+        editor.apply()
+
+    }
+
+
+    fun getLatitude(): String? {
+        return sharedPreferences.getString("latitude", null)
+    }
+
+    fun getLongitude(): String? {
+        return sharedPreferences.getString("longitude", null)
+    }
+
+    fun getLocationName(): String? {
+        return sharedPreferences.getString("locationName", null)
+    }
 
     fun getToken(): String? {
         return sharedPreferences.getString("token", null)
