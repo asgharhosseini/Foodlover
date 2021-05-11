@@ -1,10 +1,11 @@
 package ir.ah.app.foodlover.data.remot.repositoeies.restaurant
 
-import ir.ah.app.foodlover.data.model.appetizer.Appetizer
-import ir.ah.app.foodlover.data.model.beverages.Beverages
-import ir.ah.app.foodlover.data.model.dessert.Dessert
-import ir.ah.app.foodlover.data.model.maincourse.MainCourse
-import ir.ah.app.foodlover.data.model.restaurant.Restaurant
+import ir.ah.app.foodlover.data.model.appetizer.*
+import ir.ah.app.foodlover.data.model.beverages.*
+import ir.ah.app.foodlover.data.model.dessert.*
+import ir.ah.app.foodlover.data.model.maincourse.*
+import ir.ah.app.foodlover.data.model.restaurant.*
+import ir.ah.app.foodlover.data.remot.repositoeies.*
 import ir.ah.app.foodlover.data.remot.repositoeies.FakeData.restaurantAppetizerImage
 import ir.ah.app.foodlover.data.remot.repositoeies.FakeData.restaurantAppetizerName
 import ir.ah.app.foodlover.data.remot.repositoeies.FakeData.restaurantAppetizerPrice
@@ -20,17 +21,29 @@ import ir.ah.app.foodlover.data.remot.repositoeies.FakeData.restaurantMainCourse
 import ir.ah.app.foodlover.data.remot.repositoeies.FakeData.restaurantMainCourseName
 import ir.ah.app.foodlover.data.remot.repositoeies.FakeData.restaurantMainCoursePrice
 import ir.ah.app.foodlover.data.remot.repositoeies.FakeData.restaurantName
-import ir.ah.app.foodlover.data.remot.repositoeies.RestaurantRepository
+import ir.ah.app.foodlover.other.*
 import java.util.*
+import javax.inject.*
 import kotlin.random.Random
 
-class RestaurantRepositoryFake : RestaurantRepository {
+class RestaurantRepositoryFake @Inject constructor(private val userInfoManager: UserInfoManager) :
+    RestaurantRepository {
+
 
     override suspend fun getRestaurant(): Restaurant {
         val restaurantAppetizerList: ArrayList<Appetizer> = arrayListOf()
         val restaurantMainCourseList: ArrayList<MainCourse> = arrayListOf()
         val restaurantDessertList: ArrayList<Dessert> = arrayListOf()
         val restaurantBeveragesList: ArrayList<Beverages> = arrayListOf()
+        var latitudeFake: Double = 0.0
+        var longitudeFake: Double = 0.0
+        if (userInfoManager.getLatitude() != null && userInfoManager.getLongitude() != null) {
+            latitudeFake =
+                userInfoManager.getLatitude()!!.toDouble() + Random.nextDouble(0.000000, 0.009999)
+            longitudeFake =
+                userInfoManager.getLongitude()!!.toDouble() + Random.nextDouble(0.000000, 0.009999)
+        }
+
         val category = StringBuilder()
         for (j in 1..3) {
             if (j < 3) {
@@ -72,20 +85,23 @@ class RestaurantRepositoryFake : RestaurantRepository {
 
         }
         val restaurant = Restaurant(
-                1,
-                restaurantName.get(Random.nextInt(0, restaurantName.size - 1)),
-                category.toString(),
-                Random.nextInt(10, 100),
-                Random.nextInt(10, 30).toString() + "'",
-                Random.nextInt(10, 30).toString() + "دقیقه",
-                restaurantImageName.get(Random.nextInt(0, 9)),
-                restaurantAppetizerList,
-                restaurantMainCourseList,
-                restaurantDessertList,
-                restaurantBeveragesList
+            1,
+            restaurantName.get(Random.nextInt(0, restaurantName.size - 1)),
+            category.toString(),
+            Random.nextInt(10, 100),
+            Random.nextInt(10, 30).toString() + "'",
+            Random.nextInt(10, 30).toString() + "دقیقه",
+            restaurantImageName.get(Random.nextInt(0, 9)),
+            restaurantAppetizerList,
+            restaurantMainCourseList,
+            restaurantDessertList,
+            restaurantBeveragesList,
+            latitudeFake, longitudeFake
         )
 
         return restaurant
 
     }
+
+
 }
