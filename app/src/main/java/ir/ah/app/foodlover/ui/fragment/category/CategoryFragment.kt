@@ -18,7 +18,7 @@ import javax.inject.*
 @AndroidEntryPoint
 class CategoryFragment : BaseFragment<CategoryViewModel>(R.layout.fragment_category, CategoryViewModel::class) {
     @Inject
-    lateinit var categoryAdapter: CategoryAdapter
+    lateinit var categoryAdapter: AllCategoryAdapter
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
