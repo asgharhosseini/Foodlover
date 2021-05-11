@@ -34,4 +34,8 @@ data class Restaurant(
         var dessert: List<Dessert>,
         @SerializedName("beverages")
         var beverages: List<Beverages>,
+        @SerializedName("latitude")
+        var latitude: Double? = null,
+        @SerializedName("longitude")
+        var longitude: Double? = null
 ): Parcelable
