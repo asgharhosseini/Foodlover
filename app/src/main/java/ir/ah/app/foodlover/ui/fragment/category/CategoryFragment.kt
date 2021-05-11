@@ -27,6 +27,7 @@ class CategoryFragment : BaseFragment<CategoryViewModel>(R.layout.fragment_categ
     }
 
     private fun initView() {
+        toolbar.navigationIcon = resources.getDrawable(R.drawable.ic_baseline_arrow_back_ios_new_24)
         subscribeToObservers()
         setUpRecyclerViews()
         onClick()
@@ -38,7 +39,7 @@ class CategoryFragment : BaseFragment<CategoryViewModel>(R.layout.fragment_categ
         categoryAdapter.setOnItemClickListener {
             findNavController().navigate(CategoryFragmentDirections.actionCategoryFragmentToAllRestaurantFragment())
         }
-        iv_fragmentCategory_backBottom.setOnClickListener {
+        toolbar.setNavigationOnClickListener {
             findNavController().popBackStack()
         }
     }
