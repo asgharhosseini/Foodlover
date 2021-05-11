@@ -31,20 +31,18 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize">
 
-            <ImageView
-                android:id="@+id/iv_fragmentDiscount_backBottom"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_arrow_back_24" />
 
             <TextView
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:text="رستوران ها"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
+                android:text="تخفیفات"
                 android:textColor="@color/white"
                 android:textSize="18sp"
-                tools:text="Action" />
+                tools:text="تخفیفات" />
 
 
         </androidx.appcompat.widget.Toolbar>

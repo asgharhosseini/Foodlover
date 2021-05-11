@@ -28,6 +28,7 @@ class DiscountFragment : BaseFragment<DiscountViewModel>(R.layout.fragment_disco
     }
 
     private fun initView() {
+        toolbar.navigationIcon = resources.getDrawable(R.drawable.ic_baseline_arrow_back_ios_new_24)
         subscribeToObservers()
         setUpRecyclerViews()
         onClick()
@@ -35,9 +36,10 @@ class DiscountFragment : BaseFragment<DiscountViewModel>(R.layout.fragment_disco
     }
 
     private fun onClick() {
-        iv_fragmentDiscount_backBottom.setOnClickListener {
+        toolbar.setNavigationOnClickListener {
             findNavController().popBackStack()
         }
+
 
     }
 
