@@ -79,12 +79,15 @@
                 app:srcCompat="@drawable/ic_location_on_gray_24dp" />
 
             <TextView
-                android:id="@+id/textView14"
-                android:layout_width="wrap_content"
+                android:id="@+id/txt_allOrderFragment_userLocationName"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="نظرآباد،ولیعصر"
+                android:maxLines="1"
                 app:layout_constraintEnd_toStartOf="@+id/imageView6"
+                app:layout_constraintStart_toEndOf="@+id/txt_homeFragment_categoryMore"
                 app:layout_constraintTop_toTopOf="@+id/imageView6" />
 
             <TextView
@@ -105,7 +108,7 @@
                 android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+                app:layout_constraintTop_toBottomOf="@+id/txt_allOrderFragment_userLocationName" />
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
