@@ -67,6 +67,10 @@ object AppModule {
     @Provides
     fun provideCategoryAdapter() = CategoryAdapter()
 
+    @Singleton
+    @Provides
+    fun provideAllCategoryAdapter() = AllCategoryAdapter()
+
 
     @Singleton
     @Provides
