@@ -223,6 +223,17 @@
         android:id="@+id/allOrderFragment"
         android:name="ir.ah.app.foodlover.ui.fragment.allorder.AllOrderFragment"
         android:label="AllOrderFragment"
-        tools:layout="@layout/fragment_all_order" />
+        tools:layout="@layout/fragment_all_order">
+        <argument
+            android:name="latitude"
+            android:defaultValue="0.0"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="longitude"
+            android:defaultValue="0.0"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
 
 </navigation>
