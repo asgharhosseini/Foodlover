@@ -6,6 +6,19 @@
     android:layout_height="match_parent"
     android:background="@color/purple_100">
 
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Gray500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
     <ImageView
         android:id="@+id/chip4"
         android:layout_width="wrap_content"
@@ -60,18 +73,6 @@
         tools:itemCount="18"
         tools:listitem="@layout/item_allrestaurant" />
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/appbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/Gray500"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
-
-
-    </com.google.android.material.appbar.MaterialToolbar>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
