@@ -1,17 +1,14 @@
 package ir.ah.app.foodlover.di
 
-import dagger.Module
-import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ViewModelComponent
-import dagger.hilt.android.scopes.ViewModelScoped
-import ir.ah.app.foodlover.data.loacal.OrderDao
-import ir.ah.app.foodlover.data.remot.repositoeies.home.HomeRepositoryFake
-import ir.ah.app.foodlover.data.remot.repositoeies.home.HomeRepositoryImpl
-import ir.ah.app.foodlover.data.remot.repositoeies.restaurant.RestaurantRepositoryFake
-import ir.ah.app.foodlover.data.remot.repositoeies.restaurant.RestaurantRepositoryImpl
-import ir.ah.app.foodlover.data.remot.repositoeies.search.SearchRepositoryFake
-import ir.ah.app.foodlover.data.remot.repositoeies.search.SearchRepositoryImpl
+import dagger.*
+import dagger.hilt.*
+import dagger.hilt.android.components.*
+import dagger.hilt.android.scopes.*
+import ir.ah.app.foodlover.data.loacal.*
+import ir.ah.app.foodlover.data.remot.repositoeies.home.*
+import ir.ah.app.foodlover.data.remot.repositoeies.restaurant.*
+import ir.ah.app.foodlover.data.remot.repositoeies.search.*
+import ir.ah.app.foodlover.other.*
 
 
 @Module
@@ -47,6 +44,7 @@ object ViewModelModule {
 
     @ViewModelScoped
     @Provides
-    fun provideRestaurantRepositoryFake() = RestaurantRepositoryFake()
+    fun provideRestaurantRepositoryFake(userInfoManager: UserInfoManager) =
+        RestaurantRepositoryFake(userInfoManager)
 
 }
