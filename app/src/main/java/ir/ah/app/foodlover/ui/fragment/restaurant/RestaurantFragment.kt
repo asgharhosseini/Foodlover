@@ -28,8 +28,10 @@ class RestaurantFragment : BaseFragment<RestaurantViewModel>(R.layout.fragment_r
     @Inject
     lateinit var glide: RequestManager
     var orderCount = 0
-
     var title = ""
+    var latitude: Double = 0.0
+    var longitude: Double = 0.0
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -91,7 +93,12 @@ class RestaurantFragment : BaseFragment<RestaurantViewModel>(R.layout.fragment_r
         }
         btn_allOrder.setOnClickListener {
             if (orderCount > 0) {
-                findNavController().navigate(RestaurantFragmentDirections.actionRestaurantFragmentToAllOrderFragment())
+                val action =
+                    RestaurantFragmentDirections.actionRestaurantFragmentToAllOrderFragment(
+                        latitude.toString(),
+                        longitude.toString()
+                    )
+                findNavController().navigate(action)
             } else {
                 Snackbar.make(requireView(), "سفارشی نداشته اید", Snackbar.LENGTH_LONG)
 
@@ -116,6 +123,11 @@ class RestaurantFragment : BaseFragment<RestaurantViewModel>(R.layout.fragment_r
                         txt_fragmentRestaurant_category.text = " دسته بندی : " + it.categories
                         chip_fragmentRestaurant_distanceTime.text = it.timeDistance
                         chip_fragmentRestaurant_distance.text = it.distance
+                        if (it.latitude != null && it.longitude != null) {
+                            latitude = it.latitude!!
+                            longitude = it.longitude!!
+                        }
+
 
                     }
                 }
