@@ -124,16 +124,16 @@ class HomeRepositoryFake : RestaurantsRepository, CategoryRepository, BannerRepo
 
     override suspend fun getAllBanner(): List<Banner> {
         val bannerList: ArrayList<Banner> = arrayListOf()
-        for (i in 0..9) {
+        for (i in 0..bannerName.size - 1) {
             val banner = Banner(
                 i,
                 bannerName.get(i),
                 bannerSubtitle.get(i),
-                bannerImageName.get(Random.nextInt(0, 9)),
+                bannerImageName.get(i),
                 Random.nextInt(30, 70).toString(),
                 bannerColor.get(i),
                 bannerCode.get(i)
-                )
+            )
             bannerList.add(banner)
 
         }

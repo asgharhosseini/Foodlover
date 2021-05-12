@@ -352,16 +352,21 @@ object FakeData {
 
 
     val bannerName = arrayListOf<String>(
-            "سرآشپز",
-            "مهتاب",
-            "یاس",
-            "خورشید",
-            "تخت جمشید",
-            "سیب",
-            "حسن رشتی",
-            "اکبر جوجه ",
-            "پدیده",
-            "سراب"
+            "گردان برج میلاد",
+            "کوهپایه ",
+            "نایب وزرا تهران",
+            "تماشا ",
+            "ارم شاندیز",
+            "پسران کریم",
+            "باغ راز",
+            "باغ شاپوری ",
+            "خوان گستر ",
+            "کوه نور",
+            "هفت خوان ",
+            "گردان امپراطور",
+            " قاشق نقره ای",
+            "سنتی شهرزاد ",
+            "توتی فروتی "
     )
     val bannerSubtitle = arrayListOf<String>(
             "کرج",
@@ -374,32 +379,45 @@ object FakeData {
             "باغستان",
             "گوهردشت ",
             "جهانشهر",
+            "کرج",
+            "تهران",
+            "هشتگرد",
+            "عظیمیه",
             "طالقانی",
             "رجایی شهر"
     )
     val bannerImageName = arrayListOf<String>(
-            "https://cdn.takhfifan.com/images/1.0?id=/149457/6/_/6_357_16.jpg",
-            "https://cdn.takhfifan.com/images/1.0?id=/149333/_/2/_2__500_7.jpg",
-            "https://cdn.takhfifan.com/images/1.0?id=/200410/2/_/2_955_25.jpg",
-            "https://cdn.takhfifan.com/images/1.0?id=/200345/2/_/2_956_33.jpg",
-            "https://cdn.takhfifan.com/images/1.0?id=/200408/1/_/1_838_8_2_1_11_1_1.jpg",
-            "https://cdn.takhfifan.com/images/1.0?id=/200177/i/m/image_413_1_34_1_69_1_9_1_34_1_29_1_16.jpg",
-            "https://cdn.takhfifan.com/images/1.0?id=/199171/7/_/7_311_3.jpg",
-            "https://cdn.takhfifan.com/images/1.0?id=/155471/_/1/_13__64_6.jpg",
-            "https://cdn.takhfifan.com/images/1.0?id=/192338/p/9/p9_1_2.jpg",
-            "https://cdn.takhfifan.com/images/1.0?id=/172519/_/2/_2__485_32_1_2_1_1_1_1.jpg"
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-1.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88.png",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-2.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-3.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-4.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-5.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-6.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-8.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-9.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-10.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-11.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-12.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-13.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-14.jpg"
+
     )
     val bannerColor = arrayListOf<String>(
             "#FB3061",
             "#5653D4",
             "#08A791",
-            "#FAA33F",
-            "#5653D4",
             "#FB3061",
+            "#5653D4",
+            "#08A791",
+            "#5653D4",
+            "#B6644F",
+            "#FB3061",
+            "#B6644F",
             "#E5454C",
             "#08A791",
             "#5653D4",
-            "#FAA33F",
             "#FB3061",
             "#B6644F"
     )
@@ -407,6 +425,10 @@ object FakeData {
             "FB3061",
             "5653D4",
             "08A791",
+            "08A791",
+            "5653D4",
+            "FAA33F",
+            "FB3061",
             "FAA33F",
             "5653D4",
             "FB3061",
@@ -414,7 +436,6 @@ object FakeData {
             "08A791",
             "5653D4",
             "FAA33F",
-            "FB3061",
             "B6644F"
     )
 }
