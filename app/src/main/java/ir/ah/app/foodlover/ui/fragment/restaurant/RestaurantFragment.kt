@@ -19,6 +19,7 @@ import ir.ah.app.foodlover.ui.adapter.*
 import ir.ah.app.foodlover.ui.dialog.*
 import kotlinx.android.synthetic.main.fragment_restaurant.*
 import javax.inject.*
+import kotlin.random.*
 
 @AndroidEntryPoint
 class RestaurantFragment : BaseFragment<RestaurantViewModel>(R.layout.fragment_restaurant, RestaurantViewModel::class) {
@@ -42,6 +43,7 @@ class RestaurantFragment : BaseFragment<RestaurantViewModel>(R.layout.fragment_r
 
     private fun initView() {
         viewModel.getRestaurant(arg.restaurantId)
+        starRate.rating = Random.nextDouble(1.5, 4.0).toFloat()
         toolbar.navigationIcon = resources.getDrawable(R.drawable.ic_baseline_arrow_back_ios_new_24)
         toolbar.setNavigationOnClickListener {
             findNavController().popBackStack()
