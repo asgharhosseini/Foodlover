@@ -23,9 +23,25 @@ class UserInfoManager @Inject constructor(private val sharedPreferences: SharedP
 
     }
 
+    fun saveUserInfo(fullName: String, address: String) {
+        val editor = sharedPreferences.edit()
+        editor.putString("fullName", fullName)
+        editor.putString("address", address)
+        editor.apply()
+
+    }
+
+
+    fun getFullName(): String? {
+        return sharedPreferences.getString("fullName", null)
+    }
 
     fun getLatitude(): String? {
         return sharedPreferences.getString("latitude", null)
+    }
+
+    fun getAddress(): String? {
+        return sharedPreferences.getString("address", null)
     }
 
     fun getLongitude(): String? {
