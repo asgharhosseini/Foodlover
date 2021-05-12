@@ -71,6 +71,10 @@ class HomeFragment : BaseFragment<HomeViewModel>(R.layout.fragment_home, HomeVie
         categoryAdapter.setOnItemClickListener {
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToAllRestaurantFragment())
         }
+        txt_fragmentHome_addresses.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToProfileFragment())
+
+        }
 
     }
 
