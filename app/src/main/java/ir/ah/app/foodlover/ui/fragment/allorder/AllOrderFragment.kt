@@ -52,9 +52,7 @@ class AllOrderFragment :
         txt_allOrderFragment_userLocationName.text = userInfoManager.getLocationName()
 
         toolbar.navigationIcon = resources.getDrawable(R.drawable.ic_baseline_arrow_back_ios_new_24)
-        toolbar.setNavigationOnClickListener {
-            findNavController().popBackStack()
-        }
+
 
         subscribeToObservers()
         setUpRecyclerViews()
@@ -71,7 +69,12 @@ class AllOrderFragment :
 
 
     private fun onClick() {
-
+        toolbar.setNavigationOnClickListener {
+            findNavController().popBackStack()
+        }
+        txt_allOrderFragment_editProfile.setOnClickListener {
+            findNavController().navigate(AllOrderFragmentDirections.actionAllOrderFragmentToProfileFragment())
+        }
     }
 
     private fun subscribeToObservers() {
