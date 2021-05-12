@@ -79,26 +79,26 @@ class SearchRepositoryFake : SearchRepository {
 
         }
         restaurantList.forEach { restaurant ->
-            if (restaurant.title.equals(searchQuery) || restaurant.categories.equals(searchQuery)) {
+            if (restaurant.title.contains(searchQuery) || restaurant.categories.contains(searchQuery)) {
                 searchList.add(restaurant)
             } else {
                 restaurant.appetizer.forEach {
-                    if (it.title.equals(searchQuery)) {
+                    if (it.title.contains(searchQuery)) {
                         searchList.add(restaurant)
                     }
                 }
                 restaurant.mainCourse.forEach {
-                    if (it.title.equals(searchQuery)) {
+                    if (it.title.contains(searchQuery)) {
                         searchList.add(restaurant)
                     }
                 }
                 restaurant.dessert.forEach {
-                    if (it.title.equals(searchQuery)) {
+                    if (it.title.contains(searchQuery)) {
                         searchList.add(restaurant)
                     }
                 }
                 restaurant.beverages.forEach {
-                    if (it.title.equals(searchQuery)) {
+                    if (it.title.contains(searchQuery)) {
                         searchList.add(restaurant)
                     }
                 }
