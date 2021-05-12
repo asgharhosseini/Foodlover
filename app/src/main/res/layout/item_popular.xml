@@ -2,6 +2,7 @@
 
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="300dp"
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
@@ -57,8 +58,8 @@
             android:textSize="12sp"
             app:chipIcon="@drawable/ic_timer_black_24dp"
             app:chipIconSize="18dp"
-            app:layout_constraintStart_toStartOf="@+id/cardview"
-            app:layout_constraintTop_toBottomOf="@+id/txt_itemPopular_category" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_itemPopular_category"
+            tools:ignore="MissingConstraints" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_popular_distance"
@@ -73,6 +74,23 @@
             app:layout_constraintBottom_toBottomOf="@+id/chip_popular_distanceTime"
             app:layout_constraintStart_toEndOf="@+id/chip_popular_distanceTime"
             app:layout_constraintTop_toTopOf="@+id/chip_popular_distanceTime" />
+
+        <per.wsj.library.AndRatingBar
+            android:id="@+id/starRate"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:numStars="4"
+            android:rating="2.5"
+            app:bgDrawable="@drawable/ic_rating_star_border"
+            app:layout_constraintBottom_toBottomOf="@+id/chip_popular_distance"
+            app:layout_constraintEnd_toEndOf="@+id/txt_itemPopular_category"
+            app:layout_constraintStart_toEndOf="@+id/chip_popular_distance"
+            app:layout_constraintTop_toTopOf="@+id/chip_popular_distance"
+            app:starColor="@color/yellow"
+            app:starDrawable="@drawable/ic_rating_star_solid"
+            tools:ignore="MissingConstraints" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

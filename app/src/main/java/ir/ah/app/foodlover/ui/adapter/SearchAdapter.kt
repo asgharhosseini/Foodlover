@@ -8,6 +8,7 @@ import ir.ah.app.foodlover.data.model.restaurant.*
 import ir.ah.app.foodlover.other.*
 import kotlinx.android.synthetic.main.item_search.view.*
 import javax.inject.*
+import kotlin.random.*
 
 class SearchAdapter @Inject constructor(
         private val glide: RequestManager
@@ -31,6 +32,7 @@ class SearchAdapter @Inject constructor(
             txt_itemPopular_category.text = restaurant.categories
             chip_popular_distance.text = NumberHelper.EnglishToPersian(restaurant.distance)
             chip_popular_distanceTime.text = NumberHelper.EnglishToPersian(restaurant.timeDistance)
+            starRate.rating = Random.nextDouble(1.5, 4.0).toFloat()
             setOnClickListener {
                 onItemClickListener?.let { click ->
                     click(restaurant)
