@@ -77,8 +77,8 @@ object AppModule {
     fun provideGlideInstance(
         @ApplicationContext context: Context
     ) = Glide.with(context).setDefaultRequestOptions(
-        RequestOptions().placeholder(R.drawable.logobase)
-            .error(R.drawable.logobase)
+        RequestOptions().placeholder(R.drawable.logointro)
+            .error(R.drawable.logointro)
             .apply(RequestOptions().transform(CenterCrop(), RoundedCorners(16)))
             .diskCacheStrategy(DiskCacheStrategy.DATA)
     )
