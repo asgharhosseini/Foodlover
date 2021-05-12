@@ -24,6 +24,8 @@ import javax.inject.*
 class RestaurantFragment : BaseFragment<RestaurantViewModel>(R.layout.fragment_restaurant, RestaurantViewModel::class) {
     @Inject
     lateinit var dailyAdapter: MainCourseAdapter
+    private val arg by navArgs<RestaurantFragmentArgs>()
+
 
     @Inject
     lateinit var glide: RequestManager
@@ -39,6 +41,7 @@ class RestaurantFragment : BaseFragment<RestaurantViewModel>(R.layout.fragment_r
     }
 
     private fun initView() {
+        viewModel.getRestaurant(arg.restaurantId)
         toolbar.navigationIcon = resources.getDrawable(R.drawable.ic_baseline_arrow_back_ios_new_24)
         toolbar.setNavigationOnClickListener {
             findNavController().popBackStack()

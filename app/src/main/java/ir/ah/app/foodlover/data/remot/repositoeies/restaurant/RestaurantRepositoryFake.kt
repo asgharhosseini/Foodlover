@@ -30,7 +30,7 @@ class RestaurantRepositoryFake @Inject constructor(private val userInfoManager: 
     RestaurantRepository {
 
 
-    override suspend fun getRestaurant(): Restaurant {
+    override suspend fun getRestaurant(restaurantId: Int): Restaurant {
         val restaurantAppetizerList: ArrayList<Appetizer> = arrayListOf()
         val restaurantMainCourseList: ArrayList<MainCourse> = arrayListOf()
         val restaurantDessertList: ArrayList<Dessert> = arrayListOf()
@@ -85,13 +85,13 @@ class RestaurantRepositoryFake @Inject constructor(private val userInfoManager: 
 
         }
         val restaurant = Restaurant(
-            1,
-            restaurantName.get(Random.nextInt(0, restaurantName.size - 1)),
+            restaurantId,
+            restaurantName.get(restaurantId),
             category.toString(),
             Random.nextInt(10, 100),
             Random.nextInt(10, 30).toString() + "'",
             Random.nextInt(10, 30).toString() + "دقیقه",
-            restaurantImageName.get(Random.nextInt(0, 9)),
+            restaurantImageName.get(restaurantId),
             restaurantAppetizerList,
             restaurantMainCourseList,
             restaurantDessertList,

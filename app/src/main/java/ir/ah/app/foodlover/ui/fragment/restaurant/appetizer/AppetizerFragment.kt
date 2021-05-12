@@ -1,22 +1,21 @@
 package ir.ah.app.foodlover.ui.fragment.restaurant.appetizer
 
-import android.os.Bundle
-import android.util.Log
-import android.view.View
-import androidx.lifecycle.Observer
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.snackbar.Snackbar
-import dagger.hilt.android.AndroidEntryPoint
+import android.os.*
+import android.util.*
+import android.view.*
+import androidx.lifecycle.*
+import androidx.recyclerview.widget.*
+import com.google.android.material.snackbar.*
+import dagger.hilt.android.*
 import ir.ah.app.foodlover.R
-import ir.ah.app.foodlover.base.BaseFragment
-import ir.ah.app.foodlover.data.model.order.Order
-import ir.ah.app.foodlover.other.Constance
-import ir.ah.app.foodlover.other.Resource
-import ir.ah.app.foodlover.ui.adapter.AppetizerAdapter
-import ir.ah.app.foodlover.ui.dialog.OrderDialog
-import ir.ah.app.foodlover.ui.fragment.restaurant.RestaurantViewModel
+import ir.ah.app.foodlover.base.*
+import ir.ah.app.foodlover.data.model.order.*
+import ir.ah.app.foodlover.other.*
+import ir.ah.app.foodlover.ui.adapter.*
+import ir.ah.app.foodlover.ui.dialog.*
+import ir.ah.app.foodlover.ui.fragment.restaurant.*
 import kotlinx.android.synthetic.main.fragment_appetizer.*
-import javax.inject.Inject
+import javax.inject.*
 
 @AndroidEntryPoint
 class AppetizerFragment : BaseFragment<RestaurantViewModel>(R.layout.fragment_appetizer, RestaurantViewModel::class) {
@@ -31,6 +30,7 @@ class AppetizerFragment : BaseFragment<RestaurantViewModel>(R.layout.fragment_ap
     }
 
     private fun initView() {
+        viewModel.getRestaurant()
         subscribeToObservers()
         setUpRecyclerViews()
         onClick()

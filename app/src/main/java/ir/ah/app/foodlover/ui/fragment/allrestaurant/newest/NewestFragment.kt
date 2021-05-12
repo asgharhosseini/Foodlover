@@ -41,7 +41,11 @@ class NewestFragment : BaseFragment<AllRestaurantViewModel>(R.layout.fragment_ne
     private fun onClick() {
 
         allRestaurantAdapter.setOnItemClickListener {
-            findNavController().navigate(AllRestaurantFragmentDirections.actionAllRestaurantFragmentToRestaurantFragment())
+            findNavController().navigate(
+                AllRestaurantFragmentDirections.actionAllRestaurantFragmentToRestaurantFragment(
+                    it.id
+                )
+            )
         }
 
     }

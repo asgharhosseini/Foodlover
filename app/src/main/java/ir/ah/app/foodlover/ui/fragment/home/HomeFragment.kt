@@ -63,10 +63,18 @@ class HomeFragment : BaseFragment<HomeViewModel>(R.layout.fragment_home, HomeVie
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToSearchFragment())
         }
         popularAdapter.setOnItemClickListener {
-            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToRestaurantFragment())
+            findNavController().navigate(
+                HomeFragmentDirections.actionHomeFragmentToRestaurantFragment(
+                    it.id
+                )
+            )
         }
         recommendedAdapter.setOnItemClickListener {
-            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToRestaurantFragment())
+            findNavController().navigate(
+                HomeFragmentDirections.actionHomeFragmentToRestaurantFragment(
+                    it.id
+                )
+            )
         }
         categoryAdapter.setOnItemClickListener {
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToAllRestaurantFragment())

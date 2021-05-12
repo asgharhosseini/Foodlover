@@ -40,7 +40,11 @@ class TrendingFragment : BaseFragment<AllRestaurantViewModel>(R.layout.fragment_
     private fun onClick() {
 
         allRestaurantAdapter.setOnItemClickListener {
-            findNavController().navigate(AllRestaurantFragmentDirections.actionAllRestaurantFragmentToRestaurantFragment())
+            findNavController().navigate(
+                AllRestaurantFragmentDirections.actionAllRestaurantFragmentToRestaurantFragment(
+                    it.id
+                )
+            )
         }
 
     }

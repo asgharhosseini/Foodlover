@@ -5,16 +5,22 @@ import ir.ah.app.foodlover.*
 object FakeData {
 
     val restaurantName = arrayListOf<String>(
-            "سرآشپز",
-            "مهتاب",
-            "یاس",
-            "خورشید",
-            "تخت جمشید",
-            "سیب",
-            "حسن رشتی",
-            "اکبر جوجه ",
-            "پدیده",
-            "سراب"
+            "گردان برج میلاد",
+            "کوهپایه ",
+            "نایب وزرا تهران",
+            "تماشا ",
+            "ارم شاندیز",
+            "پسران کریم",
+            "باغ راز",
+            "باغ شاپوری ",
+            "خوان گستر ",
+            "کوه نور",
+            "هفت خوان ",
+            "گردان امپراطور",
+            " قاشق نقره ای",
+            "سنتی شهرزاد ",
+            "توتی فروتی "
+
     )
     val restaurantCategoryName = arrayListOf<String>(
             "بین الملی",
@@ -29,16 +35,21 @@ object FakeData {
             "جوجه ای"
     )
     val restaurantImageName = arrayListOf<String>(
-            "https://blog.okala.com/wp-content/uploads/2019/07/%D9%82%D9%88%D8%B1%D9%85%D9%87-%D8%B3%D8%A8%D8%B2%DB%8C.jpg",
-            "https://i.pinimg.com/originals/51/a8/b8/51a8b825c90acb6860a6e3056e6466f5.jpg",
-            "https://i.pinimg.com/originals/e7/d7/38/e7d7383501f66883806e722ff4d3081f.jpg",
-            "https://snapp.market/blog/wp-content/uploads/2020/04/kebab3.jpg",
-            "https://hotelyar.com/mag/uploads/blog/GOHARSHAD-MOSQUE/shandiz/kandovan/Atigh-mosque/famouris%20house/chehel-sotoun/kish%20time%20travel/kish%20retaurant/zosk-village/coffee/NewFolder/kariz-e-kish/%D8%B3%D8%A7%D9%86%D8%A7/Bank-password/%D8%B1%D8%B2%D8%B1%D9%88%20%D9%87%D8%AA%D9%84/%D8%AE%D8%A7%D9%86%D9%87%20%D8%A8%D9%87%D9%86%D8%A7%D9%85/%D8%AE%D8%A7%D9%86%D9%87%20%D8%B3%DB%8C%D9%85%DB%8C%D9%86%20%D8%AF%D8%A7%D9%86%D8%B4%D9%88%D8%B1/%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86%20%D9%87%D8%A7%DB%8C%20%D9%85%D8%B4%D9%87%D8%AF/%D9%85%D9%82%D8%A7%DB%8C%D8%B3%D9%87%20%D9%82%D8%B4%D9%85%20%D9%88%20%DA%A9%DB%8C%D8%B4/%D8%A8%D8%B3%D8%AA%D9%86%DB%8C/%D8%BA%D8%B0%D8%A7%DB%8C%20%D8%B3%D9%86%D8%AA%DB%8C%20%D9%85%D8%B4%D9%87%D8%AF/Mashahad-traditional-food-HOTELYAR-.jpg",
-            " https://blog.okala.com/wp-content/uploads/2020/10/lunch.jpg",
-            "https://img9.irna.ir/d/r2/2019/11/12/3/156756061.jpg",
-            "https://damdary.com/assets/uploads/news/1FEC2624-0756-4A43-8FF0-C2BA4B92CD19--0.jpg ",
-            "https://files.virgool.io/upload/users/16237/posts/jl5rz1pqxbqd/5sudpkj4wlha.jpeg",
-            "https://jamejamonline.ir/files/fa/news/1399/9/15/181915_716.jpg"
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-1.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88.png",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-2.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-3.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-4.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-5.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-6.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-8.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-9.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-10.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-11.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-12.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-13.jpg",
+            "http://bmtehran.ir/wp-content/uploads/2018/08/50-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D8%B3%D8%AA%D9%88-14.jpg"
     )
 
     val restaurantAppetizerName = arrayListOf<String>(

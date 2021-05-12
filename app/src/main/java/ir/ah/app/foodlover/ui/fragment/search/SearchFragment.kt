@@ -35,8 +35,12 @@ class SearchFragment : BaseFragment<SearchViewModel>(R.layout.fragment_search, S
     }
 
     private fun onClick() {
-        searchAdapter.setOnItemClickListener { item ->
-            findNavController().navigate(SearchFragmentDirections.actionSearchFragmentToRestaurantFragment())
+        searchAdapter.setOnItemClickListener {
+            findNavController().navigate(
+                SearchFragmentDirections.actionSearchFragmentToRestaurantFragment(
+                    it.id
+                )
+            )
         }
     }
 

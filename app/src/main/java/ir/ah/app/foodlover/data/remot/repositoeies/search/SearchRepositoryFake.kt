@@ -1,15 +1,14 @@
 package ir.ah.app.foodlover.data.remot.repositoeies.search
 
-import ir.ah.app.foodlover.data.model.appetizer.Appetizer
-import ir.ah.app.foodlover.data.model.beverages.Beverages
-import ir.ah.app.foodlover.data.model.dessert.Dessert
-import ir.ah.app.foodlover.data.model.maincourse.MainCourse
-import ir.ah.app.foodlover.data.model.restaurant.Restaurant
-import ir.ah.app.foodlover.data.remot.repositoeies.FakeData
+import ir.ah.app.foodlover.data.model.appetizer.*
+import ir.ah.app.foodlover.data.model.beverages.*
+import ir.ah.app.foodlover.data.model.dessert.*
+import ir.ah.app.foodlover.data.model.maincourse.*
+import ir.ah.app.foodlover.data.model.restaurant.*
+import ir.ah.app.foodlover.data.remot.repositoeies.*
 import ir.ah.app.foodlover.data.remot.repositoeies.FakeData.restaurantCategoryName
 import ir.ah.app.foodlover.data.remot.repositoeies.FakeData.restaurantImageName
 import ir.ah.app.foodlover.data.remot.repositoeies.FakeData.restaurantName
-import ir.ah.app.foodlover.data.remot.repositoeies.SearchRepository
 import java.util.*
 import kotlin.random.Random
 
@@ -22,7 +21,7 @@ class SearchRepositoryFake : SearchRepository {
         val restaurantDessertList: ArrayList<Dessert> = arrayListOf()
         val restaurantBeveragesList: ArrayList<Beverages> = arrayListOf()
         val searchList: ArrayList<Restaurant> = arrayListOf()
-        for (i in 0..9) {
+        for (i in 0..restaurantName.size - 1) {
             val category = StringBuilder()
             for (j in 1..3) {
                 if (j < 3) {
@@ -64,17 +63,17 @@ class SearchRepositoryFake : SearchRepository {
 
             }
             val restaurant = Restaurant(
-                    i,
-                    restaurantName.get(i),
-                    category.toString(),
-                    Random.nextInt(10, 100),
-                    Random.nextInt(10, 30).toString() + "'",
-                    Random.nextInt(10, 30).toString() + "دقیقه",
-                    restaurantImageName.get(Random.nextInt(0, 9)),
-                    restaurantAppetizerList,
-                    restaurantMainCourseList,
-                    restaurantDessertList,
-                    restaurantBeveragesList
+                i,
+                restaurantName.get(i),
+                category.toString(),
+                Random.nextInt(10, 100),
+                Random.nextInt(10, 30).toString() + "'",
+                Random.nextInt(10, 30).toString() + "دقیقه",
+                restaurantImageName.get(i),
+                restaurantAppetizerList,
+                restaurantMainCourseList,
+                restaurantDessertList,
+                restaurantBeveragesList
             )
             restaurantList.add(restaurant)
 

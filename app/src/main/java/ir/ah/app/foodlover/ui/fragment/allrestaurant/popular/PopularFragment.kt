@@ -41,7 +41,11 @@ class PopularFragment : BaseFragment<AllRestaurantViewModel>(R.layout.fragment_p
     private fun onClick() {
 
         allRestaurantAdapter.setOnItemClickListener {
-            findNavController().navigate(AllRestaurantFragmentDirections.actionAllRestaurantFragmentToRestaurantFragment())
+            findNavController().navigate(
+                AllRestaurantFragmentDirections.actionAllRestaurantFragmentToRestaurantFragment(
+                    it.id
+                )
+            )
         }
 
     }

@@ -1,14 +1,13 @@
 package ir.ah.app.foodlover.data.remot.repositoeies.home
 
-import ir.ah.app.foodlover.data.model.appetizer.Appetizer
-import ir.ah.app.foodlover.data.model.banner.Banner
-import ir.ah.app.foodlover.data.model.beverages.Beverages
-import ir.ah.app.foodlover.data.model.category.Category
-import ir.ah.app.foodlover.data.model.dessert.Dessert
-import ir.ah.app.foodlover.data.model.maincourse.MainCourse
-import ir.ah.app.foodlover.data.model.restaurant.Restaurant
-import ir.ah.app.foodlover.data.remot.repositoeies.BannerRepository
-import ir.ah.app.foodlover.data.remot.repositoeies.CategoryRepository
+import ir.ah.app.foodlover.data.model.appetizer.*
+import ir.ah.app.foodlover.data.model.banner.*
+import ir.ah.app.foodlover.data.model.beverages.*
+import ir.ah.app.foodlover.data.model.category.*
+import ir.ah.app.foodlover.data.model.dessert.*
+import ir.ah.app.foodlover.data.model.maincourse.*
+import ir.ah.app.foodlover.data.model.restaurant.*
+import ir.ah.app.foodlover.data.remot.repositoeies.*
 import ir.ah.app.foodlover.data.remot.repositoeies.FakeData.bannerCode
 import ir.ah.app.foodlover.data.remot.repositoeies.FakeData.bannerColor
 import ir.ah.app.foodlover.data.remot.repositoeies.FakeData.bannerImageName
@@ -32,7 +31,6 @@ import ir.ah.app.foodlover.data.remot.repositoeies.FakeData.restaurantMainCourse
 import ir.ah.app.foodlover.data.remot.repositoeies.FakeData.restaurantMainCourseName
 import ir.ah.app.foodlover.data.remot.repositoeies.FakeData.restaurantMainCoursePrice
 import ir.ah.app.foodlover.data.remot.repositoeies.FakeData.restaurantName
-import ir.ah.app.foodlover.data.remot.repositoeies.RestaurantsRepository
 import java.util.*
 import kotlin.random.Random
 
@@ -46,7 +44,7 @@ class HomeRepositoryFake : RestaurantsRepository, CategoryRepository, BannerRepo
         val restaurantDessertList: ArrayList<Dessert> = arrayListOf()
         val restaurantBeveragesList: ArrayList<Beverages> = arrayListOf()
 
-        for (i in 0..9) {
+        for (i in 0..restaurantName.size - 1) {
             val category = StringBuilder()
             for (j in 1..3) {
                 if (j < 3) {
@@ -89,17 +87,17 @@ class HomeRepositoryFake : RestaurantsRepository, CategoryRepository, BannerRepo
 
             }
             val restaurant = Restaurant(
-                    i,
-                    restaurantName.get(i),
-                    category.toString(),
-                    Random.nextInt(10, 100),
-                    Random.nextInt(10, 30).toString() + "'",
-                    Random.nextInt(10, 30).toString() + "دقیقه",
-                    restaurantImageName.get(Random.nextInt(0, 9)),
-                    restaurantAppetizerList,
-                    restaurantMainCourseList,
-                    restaurantDessertList,
-                    restaurantBeveragesList
+                i,
+                restaurantName.get(i),
+                category.toString(),
+                Random.nextInt(10, 100),
+                Random.nextInt(10, 30).toString() + "'",
+                Random.nextInt(10, 30).toString() + "دقیقه",
+                restaurantImageName.get(i),
+                restaurantAppetizerList,
+                restaurantMainCourseList,
+                restaurantDessertList,
+                restaurantBeveragesList
             )
             restaurantList.add(restaurant)
 
