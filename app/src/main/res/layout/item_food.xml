@@ -14,8 +14,8 @@
 
         <ImageView
             android:id="@+id/img_itemFood"
-            android:layout_width="150dp"
-            android:layout_height="130dp"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
             android:background="@drawable/bg_search"
             android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +30,7 @@
             android:layout_marginStart="8dp"
             android:text="همبرگر ذغالی"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="@dimen/material_text_subhead"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/img_itemFood"
@@ -43,7 +43,7 @@
             android:layout_marginTop="32dp"
             android:maxLines="1"
             android:text=" غذای غربی, فست فود, برگر"
-            android:textSize="16sp"
+            android:textSize="@dimen/material_text_body1"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/txt_itemFood_title"
             app:layout_constraintStart_toStartOf="@+id/txt_itemFood_title"

@@ -37,6 +37,7 @@
             android:layout_marginTop="16dp"
             android:textColor="@color/white"
             android:text="title"
+            android:textSize="@dimen/material_text_subhead"
             app:layout_constraintEnd_toEndOf="@+id/img_category"
             app:layout_constraintStart_toStartOf="@+id/img_category"
             app:layout_constraintTop_toBottomOf="@+id/img_category" />
@@ -48,6 +49,7 @@
             android:layout_marginTop="8dp"
             android:textColor="@color/white"
             android:text="subtitle"
+            android:textSize="@dimen/material_text_body1"
             app:layout_constraintEnd_toEndOf="@+id/txt_category_title"
             app:layout_constraintStart_toStartOf="@+id/txt_category_title"
             app:layout_constraintTop_toBottomOf="@+id/txt_category_title" />

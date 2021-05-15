@@ -6,28 +6,17 @@
     android:layout_height="match_parent"
 
     android:fitsSystemWindows="true">
-<com.google.android.material.button.MaterialButton
-    android:id="@+id/btn_allOrder"
+<androidx.core.widget.NestedScrollView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="bottom"
-    android:layout_marginHorizontal="16dp"
-    android:layout_marginBottom="8dp"
-    android:padding="16dp"
-    android:text="سفارشات شما"
-    app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior" />
+    android:fillViewport="true"
+    app:behavior_overlapTop="64dp"
+    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+    app:layout_constraintTop_toBottomOf="@+id/appbar">
 
-    <androidx.core.widget.NestedScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fillViewport="true"
-        app:behavior_overlapTop="64dp"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-        app:layout_constraintTop_toBottomOf="@+id/appbar">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/textView16"
@@ -35,6 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="برای امروز"
+                android:textSize="@dimen/material_text_button"
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@+id/materialCardView"
                 app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
@@ -91,7 +81,7 @@
                         android:layout_marginEnd="16dp"
                         android:text="همبرگر ذغالی"
                         android:textColor="@color/black"
-                        android:textSize="16sp"
+                        android:textSize="@dimen/material_text_subhead"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -104,7 +94,7 @@
                         android:layout_marginTop="8dp"
                         android:maxLines="1"
                         android:text=" غذای غربی, فست فود, برگر"
-                        android:textSize="16sp"
+                        android:textSize="@dimen/material_text_body1"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="@+id/txt_fragmentRestaurant_title"
                         app:layout_constraintTop_toBottomOf="@+id/txt_fragmentRestaurant_title" />
@@ -128,7 +118,7 @@
                         android:layout_marginEnd="32dp"
                         android:text="27`"
                         android:textColor="@color/purple_500"
-                        android:textSize="12sp"
+                        android:textSize="@dimen/material_text_button"
                         app:chipIcon="@drawable/ic_timer_black_24dp"
                         app:chipIconSize="18dp"
                         app:layout_constraintBottom_toBottomOf="@+id/chip_fragmentRestaurant_distance"
@@ -143,7 +133,7 @@
                         android:layout_marginTop="8dp"
                         android:text="256m"
                         android:textColor="@color/purple_500"
-                        android:textSize="12sp"
+                        android:textSize="@dimen/material_text_button"
                         app:chipIcon="@drawable/ic_location_on_paint_24dp"
                         app:chipIconSize="18dp"
                         app:layout_constraintEnd_toEndOf="@+id/txt_fragmentRestaurant_category"
@@ -243,7 +233,7 @@
                         android:layout_weight="0.1"
                         android:gravity="center|left"
                         android:textColor="@color/white"
-                        android:textSize="18sp"
+                        android:textSize="@dimen/material_text_title"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
@@ -256,6 +246,18 @@
             </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_allOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:padding="8dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="@dimen/material_text_button"
+        android:text="سفارشات شما"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

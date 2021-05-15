@@ -14,7 +14,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:text="کد تایید"
-        android:textSize="24sp"
+        android:textSize="@dimen/material_text_title"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="یک کد تایید برای شما ارسال شده "
-        android:textSize="16sp"
+        android:textSize="@dimen/material_text_subhead"
         app:layout_constraintEnd_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="09362674989"
-        android:textSize="18sp"
+        android:textSize="@dimen/material_text_body1"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
@@ -70,21 +70,6 @@
         app:lineWidth="0dp"
         app:viewType="rectangle" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_Confirmation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:paddingVertical="16dp"
-        android:text="تایید"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/otp_fragmentConfirmCode_code"
-        tools:ignore="MissingConstraints" />
-
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
@@ -92,7 +77,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:text="کدتایید را دریافت نکرده اید."
-        android:textSize="14sp"
+        android:textSize="@dimen/material_text_body1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_Confirmation" />
 
@@ -104,10 +89,25 @@
         android:layout_marginEnd="32dp"
         android:text="ارسال دوباره در (00:45)"
         android:textColor="@color/purple_500"
-        android:textSize="14sp"
+        android:textSize="@dimen/material_text_body1"
         app:layout_constraintBottom_toBottomOf="@+id/textView12"
         app:layout_constraintEnd_toStartOf="@+id/textView12"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView12" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_Confirmation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:paddingVertical="16dp"
+        android:text="تایید"
+        android:textSize="@dimen/material_text_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otp_fragmentConfirmCode_code"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

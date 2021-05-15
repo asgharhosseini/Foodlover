@@ -19,6 +19,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:textSize="@dimen/material_text_subhead"
                 android:layout_marginEnd="0dp"
                 android:text="مکان شما بر روی نقشه"
                 app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
@@ -102,7 +103,7 @@
                 android:layout_marginEnd="16dp"
                 android:text="پروفایل"
                 android:textColor="@color/white"
-                android:textSize="18sp"
+                android:textSize="@dimen/material_text_title"
                 tools:text="پروفایل" />
         </androidx.appcompat.widget.Toolbar>
 
@@ -115,7 +116,8 @@
         android:layout_gravity="bottom"
         android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="8dp"
-        android:padding="16dp"
+        android:padding="8dp"
+        android:textSize="@dimen/material_text_button"
         android:text="ذخیره"
         app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior" />
 

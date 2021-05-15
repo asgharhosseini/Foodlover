@@ -13,7 +13,7 @@
         android:layout_marginTop="8dp"
         android:text="جستجو کنید غذا یا رستوران "
         android:textColor="@color/purple_500"
-        android:textSize="16sp"
+        android:textSize="@dimen/material_text_subhead"
         app:layout_constraintEnd_toEndOf="@+id/lottieAnimationView"
         app:layout_constraintStart_toStartOf="@+id/lottieAnimationView"
         app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView" />

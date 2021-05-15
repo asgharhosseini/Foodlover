@@ -12,7 +12,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="TextView"
-        android:textSize="14sp"
+        android:textSize="@dimen/material_text_caption"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="TextView"
-        android:textSize="14sp"
+        android:textSize="@dimen/material_text_caption"
         app:layout_constraintBottom_toBottomOf="@+id/txt_itemOrder_title"
         app:layout_constraintStart_toEndOf="@+id/img_delete"
         app:layout_constraintTop_toTopOf="@+id/txt_itemOrder_title"

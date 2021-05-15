@@ -39,8 +39,7 @@
                 android:layout_marginEnd="16dp"
                 android:text="دسته بندی ها"
                 android:textColor="@color/white"
-                android:textSize="18sp"
-                tools:text="Action" />
+                android:textSize="@dimen/material_text_title" />
 
 
         </androidx.appcompat.widget.Toolbar>

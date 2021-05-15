@@ -6,55 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_allOrder"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginBottom="8dp"
-        android:padding="16dp"
-        android:text="پرداخت"
-        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior" />
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center">
-
-                <TextView
-                    android:id="@+id/toolbarTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="32dp"
-                    android:layout_weight="0.1"
-                    android:gravity="center|left"
-                    android:text="سفارشات شما"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-        </androidx.appcompat.widget.Toolbar>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -86,6 +37,7 @@
                 android:layout_marginEnd="8dp"
                 android:text="نظرآباد،ولیعصر"
                 android:maxLines="1"
+                android:textSize="@dimen/material_text_body2"
                 app:layout_constraintEnd_toStartOf="@+id/imageView6"
                 app:layout_constraintStart_toEndOf="@+id/txt_allOrderFragment_editProfile"
                 app:layout_constraintTop_toTopOf="@+id/imageView6" />
@@ -96,6 +48,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
+                android:textSize="@dimen/material_text_subhead"
                 android:text="ویرایش"
                 android:textColor="@color/purple_700"
                 app:layout_constraintStart_toStartOf="parent"
@@ -127,7 +80,7 @@
                     android:layout_marginEnd="16dp"
                     android:text="مجموع سفارشات:"
                     android:textColor="@color/black"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/material_text_subhead"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -141,7 +94,7 @@
                     android:text="1500000 تومان"
                     android:textColor="@color/black"
                     android:textDirection="ltr"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/material_text_body1"
                     app:layout_constraintEnd_toStartOf="@+id/textView"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -154,7 +107,7 @@
                     android:layout_marginEnd="16dp"
                     android:text="تخفیف:"
                     android:textColor="@color/black"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/material_text_subhead"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -168,7 +121,7 @@
                     android:text="20 %"
                     android:textColor="@color/black"
                     android:textDirection="ltr"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/material_text_body1"
                     app:layout_constraintEnd_toStartOf="@+id/textView"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txt_fragmentOrder_totalPrice" />
@@ -181,7 +134,7 @@
                     android:layout_marginEnd="16dp"
                     android:text="ارسال:"
                     android:textColor="@color/black"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/material_text_subhead"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
@@ -195,7 +148,7 @@
                     android:text="رایگان"
                     android:textColor="@color/black"
                     android:textDirection="ltr"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/material_text_body1"
                     app:layout_constraintEnd_toStartOf="@+id/textView"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txt_fragmentOrder_gift" />
@@ -216,6 +169,55 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/toolbarTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="32dp"
+                    android:layout_weight="0.1"
+                    android:gravity="center|left"
+                    android:text="سفارشات شما"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/material_text_title"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_allOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        android:padding="@dimen/material_text_button"
+        android:text="پرداخت"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

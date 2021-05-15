@@ -3,7 +3,7 @@
     app:cardCornerRadius="8dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="180dp"
     android:padding="16dp"
     android:layout_margin="2dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -41,7 +41,7 @@
                 android:layout_marginEnd="16dp"
                 android:text="کارت هدیه"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="@dimen/material_text_title"
 
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +56,7 @@
                 android:text="پیتزا پپرونی"
                 android:textColor="@color/white"
 
-                android:textSize="18sp"
+                android:textSize="@dimen/material_text_caption"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_homeFragment_bannerMore" />
@@ -70,7 +70,7 @@
                 android:text="10 هزار تومان"
 
                 android:textColor="@color/yellow"
-                android:textSize="24sp"
+                android:textSize="@dimen/material_text_body1"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_itemBanner_subtitle" />
@@ -82,7 +82,7 @@
                 android:layout_marginTop="8dp"
                 android:text="45826114"
                 android:textColor="@color/white"
-                android:textSize="18sp"
+                android:textSize="@dimen/material_text_body2"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/txt_itemBanner_discount"
                 app:layout_constraintTop_toBottomOf="@+id/txt_itemBanner_discount" />
